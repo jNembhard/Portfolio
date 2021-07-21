@@ -114,9 +114,10 @@ export default function CustomizedTabs() {
     <div className={classes.root}>
       {/* <div className={classes.demo1}> */}
       <AntTabs value={value} onChange={handleChange} aria-label="ant example">
-        <AntTab label="Tab 1" />
-        <AntTab label="Tab 2" />
-        <AntTab label="Tab 3" />
+        <AntTab label="Main Skills" />
+        <AntTab label="Experience" />
+        <AntTab label="Education" />
+        <AntTab label="Download Full Resume" />
       </AntTabs>
       <Typography className={classes.padding} />
       {/* </div> */}

@@ -1,8 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import Header from "./Header";
 import Info from "./Info";
 import About from "./About";
+import Contact from "./Contact";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Info />
       <About />
       {/* <Portfolio/> */}
-      {/* <Contact/> */}
+      <Contact />
       {/* <Footer/> */}
       {/* </Sections> */}
     </div>

@@ -33,8 +33,10 @@ const AboutWrap = styled.div`
 const ATitle = styled.div``;
 const AInfo = styled.div``;
 const HeaderContainer = styled.div`
-  flex: 0.5;
+  flex: 1;
   position: relative;
 `;
 
-const ATabs = styled.div``;
+const ATabs = styled.div`
+  padding-top: 30px;
+`;
