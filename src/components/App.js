@@ -4,6 +4,7 @@ import Header from "./Header";
 import Info from "./Info";
 import About from "./About";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <About />
       {/* <Portfolio/> */}
       <Contact />
-      {/* <Footer/> */}
+      <Footer />
       {/* </Sections> */}
     </div>
   );

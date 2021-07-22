@@ -88,6 +88,11 @@ const HeaderOption = styled.div`
 `;
 const OptionLine = styled.span`
   font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    color: yellow;
+  }
 `;
 
 const BurgerNav = styled.div`
@@ -119,6 +124,10 @@ const BurgerNav = styled.div`
       font-weight: 600;
       text-decoration: none;
       color: inherit;
+
+      &:hover {
+        color: yellow;
+      }
     }
   }
 `;
