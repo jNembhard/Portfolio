@@ -1,5 +1,5 @@
 import React from "react";
-import FullWidthTabs from "./TabPanel";
+import Tabs from "./Tabs";
 import styled from "styled-components";
 
 function About() {
@@ -7,7 +7,7 @@ function About() {
     <AboutWrap>
       <HeaderContainer>
         <ATitle>
-          <h1>About Me</h1>
+          <h1>About Me (Update with Amazon and Styling)</h1>
         </ATitle>
         <AInfo>
           There are many variations of passages of Lorem Ipsum available, but
@@ -16,7 +16,7 @@ function About() {
           If you are going to use a passage of Lorem Ipsum,
         </AInfo>
         <ATabs>
-          <FullWidthTabs />
+          <Tabs />
         </ATabs>
       </HeaderContainer>
     </AboutWrap>
