@@ -7,7 +7,7 @@ function About() {
     <AboutWrap>
       <HeaderContainer>
         <ATitle>
-          <h1>About Me (Update with Amazon and Styling)</h1>
+          <h2>About Me (Update with Amazon and Styling)</h2>
         </ATitle>
         <AInfo>
           There are many variations of passages of Lorem Ipsum available, but
@@ -28,9 +28,13 @@ export default About;
 const AboutWrap = styled.div`
   background-color: white;
   display: flex;
-  padding-top: 100px;
+  padding-bottom: 120px;
 `;
-const ATitle = styled.div``;
+const ATitle = styled.div`
+  > h2 {
+    font-size: 60px;
+  }
+`;
 const AInfo = styled.div``;
 const HeaderContainer = styled.div`
   flex: 1;

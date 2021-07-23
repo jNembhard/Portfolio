@@ -46,6 +46,7 @@ const IntroWrapper = styled.div`
   background-color: white;
   display: flex;
   overflow-x: hidden;
+  padding-bottom: 120px;
 
   @media (max-width: 768px) {
     flex-direction: column;

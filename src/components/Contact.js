@@ -1,26 +1,61 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useForm } from "react-hook-form";
 
 // import emailjs from "emailjs-js"
 
 function Contact(props) {
   const [message, setMessage] = useState(false);
+  const [values, setValues] = useState({ name: "", email: "", subject: "" });
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setMessage(true);
   };
 
+  const handleNameChange = (event) => {
+    event.persist();
+    setValues((values) => ({ ...values, name: event.target.value }));
+  };
+
+  const handleEmailChange = (event) => {
+    event.persist();
+    setValues((values) => ({ ...values, email: event.target.value }));
+  };
+
+  const handleSubjectChange = (event) => {
+    event.persist();
+    setValues((values) => ({ ...values, subject: event.target.value }));
+  };
+
   return (
     <ContactWrapper>
       <ContactContainer>
         <Left>
-          <h1>Contact Me</h1>
+          <ContactHeading>Contact Me</ContactHeading>
           <form onSubmit={handleSubmit}>
             {/* <label for="html">HTML</label> */}
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Email" />
-            <input type="text" placeholder="Subject" />
+            <input
+              id="name"
+              type="text"
+              placeholder="Your Name"
+              value={values.name}
+              onChange={handleNameChange}
+            />
+            <input
+              id="email"
+              type="text"
+              placeholder="Your Email"
+              value={values.email}
+              onChange={handleEmailChange}
+            />
+            <input
+              id="subject"
+              type="text"
+              placeholder="Subject"
+              value={values.subject}
+              onChange={handleSubjectChange}
+            />
             <textarea placeholder="Write a message..." />
             <div className="frame">
               <button className="custom-btn btn-9" type="submit">
@@ -55,6 +90,9 @@ const ContactContainer = styled.div`
   display: flex;
 `;
 
+const ContactHeading = styled.h2`
+  font-size: 60px;
+`;
 const Left = styled.div`
   flex: 0.5;
   flex-direction: column;
