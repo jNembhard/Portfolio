@@ -29,6 +29,10 @@ const AboutWrap = styled.div`
   background-color: white;
   display: flex;
   padding-bottom: 120px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 110px;
+  }
 `;
 const ATitle = styled.div`
   > h2 {

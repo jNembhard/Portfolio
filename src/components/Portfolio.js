@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Card from "./Card";
-import portfolioItems from "./PortfolioList";
+import Card from "./props/Card";
+import portfolioItems from "./data/portfolioItems";
 
 function Portfolio() {
   return (
