@@ -4,11 +4,13 @@ import { Spin as Hamburger } from "hamburger-react";
 
 function Header(props) {
   const [burgerStatus, setBurgerStatus] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <HeaderWrapper>
       <ContainerOne>
         {/* <Logo /> */}
-        <h1>Logo</h1>
+        <h1>jason.</h1>
       </ContainerOne>
 
       <HeaderNav>
@@ -27,6 +29,7 @@ function Header(props) {
         <RightMenu>
           <CustomBurger toggled={burgerStatus} toggle={setBurgerStatus} />
         </RightMenu>
+
         <BurgerNav show={burgerStatus}>
           <ul>
             <li>
@@ -34,9 +37,6 @@ function Header(props) {
             </li>
             <li>
               <a href="...">Projects</a>
-            </li>
-            <li>
-              <a href="...">Resume</a>
             </li>
             <li>
               <a href="...">Contact</a>
@@ -54,7 +54,7 @@ const HeaderWrapper = styled.div`
   height: 60px;
   display: flex;
   top: 0;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   z-index: 1;
 `;
 
@@ -67,6 +67,7 @@ const ContainerOne = styled.div`
 const ContainerTwo = styled.div`
   display: flex;
   margin-left: auto;
+  overflow-y: hidden;
 `;
 const HeaderNav = styled.div`
   display: flex;

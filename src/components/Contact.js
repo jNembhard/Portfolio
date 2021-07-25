@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
-
-// import emailjs from "emailjs-js"
+import { send } from "emailjs-com";
 
 function Contact(props) {
   const [message, setMessage] = useState(false);
@@ -13,48 +12,28 @@ function Contact(props) {
     setMessage(true);
   };
 
-  const handleNameChange = (event) => {
-    event.persist();
-    setValues((values) => ({ ...values, name: event.target.value }));
-  };
-
-  const handleEmailChange = (event) => {
-    event.persist();
-    setValues((values) => ({ ...values, email: event.target.value }));
-  };
-
-  const handleSubjectChange = (event) => {
-    event.persist();
-    setValues((values) => ({ ...values, subject: event.target.value }));
-  };
-
   return (
     <ContactWrapper>
       <ContactContainer>
         <Left>
           <ContactHeading>Contact Me</ContactHeading>
-          <form onSubmit={handleSubmit}>
-            {/* <label for="html">HTML</label> */}
+          <form
+            action="https://formsubmit.co/"
+            method="POST"
+            onSubmit={handleSubmit}
+          >
+            <input name="name" type="text" placeholder="Your Name *" required />
             <input
-              id="name"
-              type="text"
-              placeholder="Your Name"
-              value={values.name}
-              onChange={handleNameChange}
+              name="email"
+              type="email"
+              placeholder="Your Email *"
+              required
             />
             <input
-              id="email"
+              name="subject"
               type="text"
-              placeholder="Your Email"
-              value={values.email}
-              onChange={handleEmailChange}
-            />
-            <input
-              id="subject"
-              type="text"
-              placeholder="Subject"
-              value={values.subject}
-              onChange={handleSubjectChange}
+              placeholder="Subject *"
+              required
             />
             <textarea placeholder="Write a message..." />
             <div className="frame">
@@ -66,6 +45,7 @@ function Contact(props) {
           </form>
         </Left>
         <Right>
+          {/* <InfoContainer> */}
           <ContactInfo>
             <h2>Phone Number:</h2>
             +1 (703) 297-0357
@@ -74,6 +54,7 @@ function Contact(props) {
             <h2>E-mail Address:</h2>
             nembhardjl@outlook.com
           </ContactInfo>
+          {/* </InfoContainer> */}
         </Right>
       </ContactContainer>
     </ContactWrapper>
@@ -88,6 +69,9 @@ const ContactWrapper = styled.div`
 
 const ContactContainer = styled.div`
   display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ContactHeading = styled.h2`
@@ -95,26 +79,22 @@ const ContactHeading = styled.h2`
 `;
 const Left = styled.div`
   flex: 0.5;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 0 100px;
 
   > form {
-    /* width: 70%;
-    height: 70%;
+    margin-top: 20px;
+    /* margin-right: 20px; */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around; */
-    margin-top: 20px;
-    margin-right: 20px;
-    display: block;
+    @media (max-width: 768px) {
+      object-fit: contain;
+      /* max-width: 100%; */
+    }
   }
 
   form > input {
-    display: block;
-    width: 100%;
+    /* display: block; */
+    /* width: 100%; */
     padding: 0 20px;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -130,8 +110,8 @@ const Left = styled.div`
   }
 
   form > textarea {
-    display: block;
-    width: 100%;
+    /* display: block; */
+    /* width: 100%; */
     padding: 0 20px;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -149,6 +129,10 @@ const Left = styled.div`
   > form > button {
     flex: 0.5;
   }
+
+  @media (max-width: 768px) {
+    padding: 32px 25px;
+  }
 `;
 
 const Right = styled.div`
@@ -156,10 +140,14 @@ const Right = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: 0 100px; */
+  padding: 0 100px;
   /* max-width: 395px; */
   padding-left: 0;
   padding-top: 63px;
+
+  @media (max-width: 768px) {
+    padding: 32px 25px;
+  }
 `;
 
 const ContactInfo = styled.div`
@@ -168,4 +156,5 @@ const ContactInfo = styled.div`
   margin-bottom: 20px;
   border: 3px solid rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  align-items: center;
 `;

@@ -26,11 +26,11 @@ function Info() {
       </Left>
       <Right>
         <Title>
-          {/* <h2>Hello, I'm Jason Nembhard,</h2> */}
-          <h3>
-            Hi! I'm Jason Nembhard, A <span ref={textRef}></span>
-            <h2>Step into my world.</h2>
-          </h3>
+          <h6>Hello</h6>
+          <h1>I'm Jason Nembhard.</h1>
+          <h2>
+            A <span ref={textRef}></span>
+          </h2>
         </Title>
         <PortfolioAnchor>
           <img alt="scroll down" />
@@ -99,15 +99,11 @@ const Title = styled.div`
     /* margin: 10px 0; */
   }
 
-  > h2 {
-    font-size: 35px;
-  }
-
   > h3 {
     font-size: 30px;
   }
 
-  > h3 > span {
+  > h2 > span {
     font-size: inherit;
     color: crimson;
   }

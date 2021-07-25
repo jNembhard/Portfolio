@@ -1,10 +1,9 @@
 const experienceDatasets = [
   {
     id: 1,
-    number: 0,
     image: "https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg",
     title: "Personal Projects",
-    subtitle: "Just a holder",
+    subtitle: "",
     date: "August 2020 - Present",
     achievements: [
       {
@@ -44,7 +43,6 @@ const experienceDatasets = [
   },
   {
     id: 2,
-    number: 1,
     image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
     title: "AlNembCo Services LLC",
     subtitle: "Electrician Associate",
@@ -73,7 +71,6 @@ const experienceDatasets = [
   },
   {
     id: 3,
-    number: 2,
     image: "https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg",
     title: "George Mason University (GMU)",
     subtitle: "Rapid Reliable Urban Mobility System (RRUMS) Project Member",
@@ -81,12 +78,24 @@ const experienceDatasets = [
     achievements: [
       {
         id: 1,
-        item: "Capstone project developed with the goal of reducing the travel Planning Time Index (PTI) from 1.6 to 1.\n\tUrban Air Mobility (UAM) simulation model built in Java comprised of 5 UAM destinations and 13 flight paths between airport and business districts in the Washington, D.C. area.",
+        item: "Capstone project developed with the goal of reducing the travel Planning Time Index (PTI) from 1.6 to 1.",
+        subitems: [
+          {
+            id: 1,
+            sub: "Urban Air Mobility (UAM) simulation model built in Java comprised of 5 UAM destinations and 13 flight paths between airport and business districts in the Washington, D.C. area.",
+          },
+        ],
       },
 
       {
         id: 2,
-        item: "Composed Business Case proposing 20% faster transportation with 97.9% reliability through the D.C. area.\n\tDetailed 10% penetration rate of high-value market with an anticipated 10-year profit forecast of $195.6M, and a 2-year breakeven point with an estimated 122.26% ROI at $200 per passenger ticket.",
+        item: "Composed Business Case proposing 20% faster transportation with 97.9% reliability through the D.C. area.",
+        subitems: [
+          {
+            id: 1,
+            sub: "Detailed 10% penetration rate of high-value market with an anticipated 10-year profit forecast of $195.6M, and a 2-year breakeven point with an estimated 122.26% ROI at $200 per passenger ticket.",
+          },
+        ],
       },
 
       {
@@ -101,7 +110,13 @@ const experienceDatasets = [
 
       {
         id: 5,
-        item: "Defined Context, Stakeholder, and Enterprise Analyses.\n\tUsed to set the stage for RRUMS development and define interactions between industry clients and the surrounding environment.",
+        item: "Defined Context, Stakeholder, and Enterprise Analyses.",
+        subitems: [
+          {
+            id: 1,
+            sub: "Used to set the stage for RRUMS development and define interactions between industry clients and the surrounding environment.",
+          },
+        ],
       },
     ],
   },

@@ -9,6 +9,7 @@ import {
   MDBCarouselCaption,
   MDBCard,
   MDBCardTitle,
+  MDBCardSubTitle,
   MDBCardText,
   MDBCardOverlay,
   MDBCardImage,
@@ -16,26 +17,47 @@ import {
 
 function Experience(props) {
   return (
-    <MDBCarousel showControls showIndicators dark fade>
-      <MDBCarouselInner>
-        <MDBCarouselItem itemId={props.number}>
-          <MDBCard background="dark" className="text-white">
-            <MDBCardImage overlay src={props.image} alt="Experience" />
-            <MDBCardOverlay>
-              <MDBCardTitle>{props.title}</MDBCardTitle>
-              <MDBCardText>{props.subtitle}</MDBCardText>
-              <MDBCardText>{props.date}</MDBCardText>
-              <MDBCardText>{props.achievements}</MDBCardText>
-            </MDBCardOverlay>
-          </MDBCard>
-        </MDBCarouselItem>
-      </MDBCarouselInner>
-    </MDBCarousel>
+    <MDBCard background="dark" className="text-white">
+      <MDBCardImages overlay src={props.image} alt="Experience" />
+      {/* <MDBCarouselElement
+        src="https://mdbcdn.b-cdn.net/img/new/slides/041.jpg"
+        alt="..."
+      /> */}
+      <MDBCardOverlay>
+        <MDBCardTitle>{props.title}</MDBCardTitle>
+        <SubTitleWrap>
+          <MDBCardSubTitles>{props.subtitle}</MDBCardSubTitles>
+          <MDBCardSubTitles>{props.date}</MDBCardSubTitles>
+        </SubTitleWrap>
+        <MDBCardTexts>{props.achievements}</MDBCardTexts>
+      </MDBCardOverlay>
+    </MDBCard>
   );
 }
 
 export default Experience;
 
-const MDBCarouselCaptions = styled(MDBCarouselCaption)`
-  top: 0;
+const MDBCardSubTitles = styled(MDBCardSubTitle)`
+  display: flex;
+  margin-bottom: 5px;
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+`;
+
+const SubTitleWrap = styled.div`
+  /* display: flex; */
+  /* justify-content: space-between; */
+`;
+
+const MDBCardTexts = styled(MDBCardText)`
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+
+const MDBCardImages = styled(MDBCardImage)`
+  width: 100%;
+  height: 600px;
+  /* object-fit: contain; */
 `;
