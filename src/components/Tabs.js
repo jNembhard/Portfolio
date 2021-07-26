@@ -30,7 +30,7 @@ export default function Tabs() {
 
   return (
     <>
-      <MDBRow2>
+      <MDBRow>
         <MDBCol>
           <MDBTabs className="text-center">
             <MDBTabsItem>
@@ -184,7 +184,7 @@ export default function Tabs() {
             </MDBTabsContent>
           </TabWrap>
         </MDBCol>
-      </MDBRow2>
+      </MDBRow>
     </>
   );
 }
