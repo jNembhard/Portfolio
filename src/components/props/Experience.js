@@ -1,12 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import {
-  MDBCarousel,
-  MDBCarouselInner,
-  MDBCarouselItem,
-  MDBCarouselElement,
-  MDBCarouselCaption,
   MDBCard,
   MDBCardTitle,
   MDBCardSubTitle,
@@ -59,5 +54,4 @@ const MDBCardTexts = styled(MDBCardText)`
 const MDBCardImages = styled(MDBCardImage)`
   width: 100%;
   height: 600px;
-  /* object-fit: contain; */
 `;

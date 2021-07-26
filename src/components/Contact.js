@@ -1,19 +1,68 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
-import { send } from "emailjs-com";
+import emailjs from "emailjs-com";
+import MuiAlert from "@material-ui/lab/Alert";
+import Snackbar from "@material-ui/core/Snackbar";
+
+import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 function Contact(props) {
   const [message, setMessage] = useState(false);
-  const [values, setValues] = useState({ name: "", email: "", subject: "" });
+  const [state, setState] = useState({
+    open: false,
+    vertical: "top",
+    horizontal: "center",
+  });
+
+  const { vertical, horizontal, open } = state;
+
+  const handleClick = (newState) => () => {
+    setState({ open: true, ...newState });
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setMessage(true);
+    event.target.reset();
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setMessage(false);
+    setState({ ...state, open: false });
+  };
+
+  const sendEmail = (event) => {
+    event.preventDefault();
+    setMessage(true);
+
+    emailjs
+      .sendForm(
+        `${process.env.REACT_APP_YOUR_SERVICE_ID}`,
+        `${process.env.REACT_APP_YOUR_TEMPLATE_ID}`,
+        event.target,
+        `${process.env.REACT_APP_YOUR_USER_ID}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    event.target.reset();
   };
 
   return (
-    <ContactWrapper>
+    <ContactWrapper id="contact">
       <ContactContainer>
         <Left>
           <ContactHeading>Contact Me</ContactHeading>
@@ -22,9 +71,14 @@ function Contact(props) {
             method="POST"
             onSubmit={handleSubmit}
           >
-            <input name="name" type="text" placeholder="Your Name *" required />
             <input
-              name="email"
+              name="from_name"
+              type="text"
+              placeholder="Your Name *"
+              required
+            />
+            <input
+              name="from_email"
               type="email"
               placeholder="Your Email *"
               required
@@ -35,13 +89,33 @@ function Contact(props) {
               placeholder="Subject *"
               required
             />
-            <textarea placeholder="Write a message..." />
-            <div className="frame">
-              <button className="custom-btn btn-9" type="submit">
-                SUBMIT
-              </button>
+            <textarea
+              name="message"
+              placeholder="Write a message..."
+              required
+            />
+            <div>
+              <MDBBtn
+                onClick={handleClick({
+                  vertical: "bottom",
+                  horizontal: "right",
+                })}
+                type="submit"
+              >
+                <MDBIconS far icon="envelope" />
+                Send Message
+              </MDBBtn>
+              <Snackbar
+                // anchorOrigin={{vertical, horizontal}}
+                open={message}
+                autoHideDuration={null}
+                onClose={handleClose}
+              >
+                <Alert onClose={handleClose} severity="success">
+                  This is a success message!
+                </Alert>
+              </Snackbar>
             </div>
-            {message && <span>Thanks, I'll reply soon!</span>}
           </form>
         </Left>
         <Right>
@@ -126,13 +200,13 @@ const Left = styled.div`
     letter-spacing: 0.1px;
   }
 
-  > form > button {
-    flex: 0.5;
-  }
-
   @media (max-width: 768px) {
     padding: 32px 25px;
   }
+`;
+
+const MDBIconS = styled(MDBIcon)`
+  padding-right: 5px;
 `;
 
 const Right = styled.div`

@@ -12,7 +12,6 @@ import {
   MDBCarouselItem,
 } from "mdb-react-ui-kit";
 import styled from "styled-components";
-import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 import experienceDatasets from "./data/experienceDatasets";
 import Experience from "./props/Experience";
 import Skills from "./props/Skills";
@@ -32,37 +31,34 @@ export default function Tabs() {
     <>
       <MDBRow>
         <MDBCol>
-          <MDBTabs className="text-center">
-            <MDBTabsItem>
-              <MDBTabsLink
-                onClick={() => handleBasicClick("tab1")}
-                active={basicActive === "tab1"}
-              >
-                Main Skills
-              </MDBTabsLink>
-            </MDBTabsItem>
-            <MDBTabsItem>
-              <MDBTabsLink
-                onClick={() => handleBasicClick("tab2")}
-                active={basicActive === "tab2"}
-              >
-                Experience
-              </MDBTabsLink>
-            </MDBTabsItem>
-            <MDBTabsItem>
-              <MDBTabsLink
-                onClick={() => handleBasicClick("tab3")}
-                active={basicActive === "tab3"}
-              >
-                Education
-              </MDBTabsLink>
-            </MDBTabsItem>
-            {/* <MDBBtns size="lg" tag="a">
-              Resume
-              <MDBIcons fas icon="download" />
-            </MDBBtns> */}
-          </MDBTabs>
-
+          <TabWrap>
+            <MDBTabs className="text-center">
+              <MDBTabsItem>
+                <MDBTabsLink
+                  onClick={() => handleBasicClick("tab1")}
+                  active={basicActive === "tab1"}
+                >
+                  Main Skills
+                </MDBTabsLink>
+              </MDBTabsItem>
+              <MDBTabsItem>
+                <MDBTabsLink
+                  onClick={() => handleBasicClick("tab2")}
+                  active={basicActive === "tab2"}
+                >
+                  Experience
+                </MDBTabsLink>
+              </MDBTabsItem>
+              <MDBTabsItem>
+                <MDBTabsLink
+                  onClick={() => handleBasicClick("tab3")}
+                  active={basicActive === "tab3"}
+                >
+                  Education
+                </MDBTabsLink>
+              </MDBTabsItem>
+            </MDBTabs>
+          </TabWrap>
           <TabWrap>
             <MDBTabsContent>
               <MDBTabsPane show={basicActive === "tab1"}>
@@ -152,7 +148,7 @@ export default function Tabs() {
                           .map((experienceDataset) => (
                             <Experience
                               key={experienceDataset.id}
-                              image={experienceDataset.image}
+                              // image={experienceDataset.image}
                               title={experienceDataset.title}
                               date={experienceDataset.date}
                               subtitle={experienceDataset.subtitle}
@@ -189,23 +185,6 @@ export default function Tabs() {
   );
 }
 
-// const MDBIcons = styled(MDBIcon)`
-//   margin-left: 5px; ;
-// `;
-
-// const MDBBtns = styled(MDBBtn)`
-//   margin-left: 20px;
-// `;
-
-const MDBRow2 = styled(MDBRow)`
-  display: flex;
-  justify-content: center;
-`;
-const FirstWrap = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
 const CardWrapper = styled.div`
   display: flex;
   max-width: 90vw;
@@ -216,9 +195,6 @@ const TabWrap = styled.div`
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
-`;
-const H6 = styled.h6`
-  flex: 0.97; ;
 `;
 
 const RowDouble = styled.div`
@@ -231,36 +207,12 @@ const RowDouble = styled.div`
 const RowWrap = styled.div`
   display: flex;
   object-fit: contain;
-
-  /* flex-direction: row; */
-  /* justify-content: space-evenly; */
-  /* justify-content: space-between; */
-  /* justify-content: space-evenly; */
 `;
 
 const Row = styled.div`
-  /* flex-direction: column; */
   margin-right: 5px;
   margin-left: 5px;
   @media (max-width: 768px) {
     object-fit: contain;
-    /* flex-direction: column; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* margin-let: auto;
-    margin-right: auto; */
   }
-`;
-
-const Row2 = styled(Row)`
-  /* display: none; */
-  flex-direction: column;
-`;
-
-const MDBIcons = styled(MDBIcon)`
-  margin-left: 5px; ;
-`;
-
-const MDBBtns = styled(MDBBtn)`
-  margin-left: 20px;
 `;

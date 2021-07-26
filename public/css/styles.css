@@ -30,12 +30,6 @@ body {
   }
 }
 
-.frame {
-  width: 90%;
-  /* margin: 40px auto; */
-  text-align: center;
-}
-
 .custom-btn {
   width: 130px;
   height: 40px;

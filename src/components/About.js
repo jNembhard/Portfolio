@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 function About() {
   return (
-    <AboutWrap>
+    <AboutWrap id="about">
       <HeaderContainer>
         <ATitle>
           <h2>About Me (Update with Amazon and Styling)</h2>

@@ -5,7 +5,7 @@ import portfolioItems from "./data/portfolioItems";
 
 function Portfolio() {
   return (
-    <PortfolioWrapper>
+    <PortfolioWrapper id="portfolio">
       <PortfolioHeading>Portfolio</PortfolioHeading>
       <RowWrap>
         <Row>

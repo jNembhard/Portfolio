@@ -38,7 +38,7 @@ const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   top: 0;
-  background-color: lightblue;
+  background-color: #202020;
   margin-top: 30px;
   /* padding-top: 30px; */
   align-items: center;

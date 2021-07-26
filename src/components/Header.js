@@ -3,7 +3,12 @@ import styled from "styled-components";
 import { Spin as Hamburger } from "hamburger-react";
 import useScrollBlock from "./hooks/useScrollBlock";
 import { useOnClickOutside } from "./hooks/useOnClickOutside";
-import { MDBBtn } from "mdb-react-ui-kit";
+import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+
+// function Scroll() {
+//   const scrollRef = useRef(null);
+//   const executeScroll = () => scrollRef.current.scrollIntoView();
+// }
 
 function Header(props) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -16,9 +21,9 @@ function Header(props) {
   // const [scorll, setScroll] = useOnClickOutside();
 
   const sides = [
-    { id: 1, option: "About" },
-    { id: 2, option: "Portfolio" },
-    { id: 3, option: "Contact " },
+    { id: 1, option: "About", section: "#about" },
+    { id: 2, option: "Portfolio", section: "#portfolio" },
+    { id: 3, option: "Contact ", section: "#contact" },
   ];
 
   return (
@@ -33,12 +38,15 @@ function Header(props) {
           <HeaderNav>
             {sides.map((side) => (
               <HeaderOption>
-                <OptionLine key={side.id}>{side.option}</OptionLine>
+                <AnchorLine key={side.id} href={side.section}>
+                  {side.option}
+                </AnchorLine>
               </HeaderOption>
             ))}
             <HeaderBtnWrap>
               <MDBBtns outline color="info">
                 Resume
+                <MDBIconS fas icon="download" />
               </MDBBtns>
             </HeaderBtnWrap>
           </HeaderNav>
@@ -54,18 +62,19 @@ function Header(props) {
           <BurgerNav modalOpen={modalOpen}>
             <ul>
               <li>
-                <a href="...">About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="...">Portfolio</a>
+                <a href="#portfolio">Portfolio</a>
               </li>
               <li>
-                <a href="...">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
             <BtnNav>
               <MDBBtns outline color="info">
                 Resume
+                <MDBIconS fas icon="download" />
               </MDBBtns>
             </BtnNav>
           </BurgerNav>
@@ -76,6 +85,7 @@ function Header(props) {
 }
 
 export default Header;
+// export Scroll;
 
 const HeaderWrapper = styled.div`
   height: 60px;
@@ -111,7 +121,9 @@ const HeaderNav = styled.div`
 `;
 
 const BtnNav = styled.div`
-  padding: 0 150px;
+  margin: 0 20px;
+
+  width: 200px;
 `;
 // const Logo = styled.div``;
 
@@ -134,12 +146,17 @@ const MDBBtns = styled(MDBBtn)`
   }
 `;
 
-const OptionLine = styled.span`
+const MDBIconS = styled(MDBIcon)`
+  padding-left: 5px;
+`;
+
+const AnchorLine = styled.a`
   font-weight: 500;
   cursor: pointer;
+  color: inherit;
 
   &:hover {
-    background: yellow;
+    color: yellow;
   }
 `;
 
