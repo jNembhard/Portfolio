@@ -5,11 +5,6 @@ import useScrollBlock from "./hooks/useScrollBlock";
 import { useOnClickOutside } from "./hooks/useOnClickOutside";
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 
-// function Scroll() {
-//   const scrollRef = useRef(null);
-//   const executeScroll = () => scrollRef.current.scrollIntoView();
-// }
-
 function Header(props) {
   const [modalOpen, setModalOpen] = useState(false);
   const [blockScroll, allowScroll] = useScrollBlock();
@@ -18,7 +13,6 @@ function Header(props) {
   useOnClickOutside(wrapperRef, () =>
     setModalOpen(false) ? blockScroll() : allowScroll()
   );
-  // const [scorll, setScroll] = useOnClickOutside();
 
   const sides = [
     { id: 1, option: "About", section: "#about" },
@@ -28,13 +22,10 @@ function Header(props) {
 
   return (
     <div ref={wrapperRef}>
-      <HeaderWrapper>
-        <ContainerOne>
-          {/* <Logo /> */}
-          <h1>jason.</h1>
-        </ContainerOne>
+      <Container>
+        <h1>jason.</h1>
 
-        <ContainerTwo>
+        <div>
           <HeaderNav>
             {sides.map((side) => (
               <HeaderOption>
@@ -50,6 +41,7 @@ function Header(props) {
               </MDBBtns>
             </HeaderBtnWrap>
           </HeaderNav>
+
           <RightMenu>
             <CustomBurger
               hideOutline={false}
@@ -78,54 +70,37 @@ function Header(props) {
               </MDBBtns>
             </BtnNav>
           </BurgerNav>
-        </ContainerTwo>
-      </HeaderWrapper>
+        </div>
+      </Container>
     </div>
   );
 }
 
 export default Header;
-// export Scroll;
 
-const HeaderWrapper = styled.div`
+const Container = styled.div`
   height: 60px;
   display: flex;
+  justify-content: space-between;
   top: 0;
+  left: 0;
+  right: 0;
   /* background-color: lightblue; */
   z-index: 1;
 `;
 
-const ContainerOne = styled.div`
-  display: flex;
-  margin-left: 25px;
-  margin-top: 2px;
-  z-index: 2;
-  @media (min-width) {
-    margin-top: 10px;
-  }
-`;
-
-const ContainerTwo = styled.div`
-  display: flex;
-  margin-left: auto;
-  overflow-y: hidden;
-`;
 const HeaderNav = styled.div`
   display: flex;
-  flex: 1;
-  /* justify-content: space-evenly; */
 
-  @media (max-width: 768px) {
+  @media (max-width: 539px) {
     display: none;
   }
 `;
 
 const BtnNav = styled.div`
   margin: 0 20px;
-
   width: 200px;
 `;
-// const Logo = styled.div``;
 
 const HeaderOption = styled.div`
   display: flex;
@@ -161,40 +136,43 @@ const AnchorLine = styled.a`
 `;
 
 const BurgerNav = styled.div`
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background-color: white;
-  width: 300px;
-  z-index: 99;
-  list-style: none;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  transform: translateX(${(props) => (props.modalOpen ? 0 : 100)}%);
-  /* visibility: ${(props) => (props.modalOpen ? "visible" : "hidden")}; */
+  display: none;
+  @media (max-width: 539px) {
+    height: 100vh;
+    display: inherit;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    width: 300px;
+    z-index: 100;
+    padding: 20px;
+    flex-direction: column;
+    text-align: start;
+    transform: translateX(${(props) => (props.modalOpen ? 0 : 100)}%);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
 
-  transition: transform 0.2s ease-in-out;
+    ul {
+      list-style-type: none;
+      padding: 5px 0;
+      padding-left: 15px;
+    }
 
-  ul {
-    list-style-type: none;
-    padding: 20px 0;
-    padding-left: 15px;
-  }
+    li {
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
-  li {
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      a {
+        font-weight: 600;
+        text-decoration: none;
+        color: inherit;
 
-    a {
-      font-weight: 600;
-      text-decoration: none;
-      color: inherit;
-
-      &:hover {
-        color: yellow;
+        &:hover {
+          color: yellow;
+        }
       }
     }
   }
@@ -202,27 +180,19 @@ const BurgerNav = styled.div`
 
 const RightMenu = styled.div`
   display: none;
-  align-items: center;
-  margin-right: 20px;
-  z-index: 100;
-  @media (max-width: 768px) {
+
+  @media (max-width: 539px) {
     display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+    margin-top: 10px;
+    z-index: 101;
   }
 `;
 
-// const Menu = styled.div``;
-
-// const CloseWrapper = styled.div`
-//   display: flex;
-//   justify-content: flex-end;
-// `;
-
 const CustomBurger = styled(Hamburger)`
-  cursor: pointer;
-  z-index: 100;
+  @media (max-width: 539px) {
+    cursor: pointer;
+    z-index: 102;
+  }
 `;
-
-// const CustomClose = styled(Hamburger)`
-//   cursor: pointer;
-//   text-align: right;
-// `;

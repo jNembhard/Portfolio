@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
+import React from "react";
 import Header from "./Header";
 import Info from "./Info";
 import About from "./About";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Footer from "./Footer";
-// import Placeholder from "./Placeholder";
+import Resume from "./Resume";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Info />
       <About />
-      {/* <Placeholder /> */}
+      <Resume />
       <Portfolio />
       <Contact />
       <Footer />
@@ -22,5 +22,3 @@ function App() {
 }
 
 export default App;
-
-// const Sections = styled.div``;

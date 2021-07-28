@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Card from "./props/Card";
 import portfolioItems from "./data/portfolioItems";
+// import skills from "./data/skillsDatasets";
+// import Skills from "./props/Skills";
 
 function Portfolio() {
   return (
@@ -9,16 +11,14 @@ function Portfolio() {
       <PortfolioHeading>Portfolio</PortfolioHeading>
       <RowWrap>
         <Row>
-          {portfolioItems.slice(0, 3).map((portfolioItem) => (
-            <Card
-              key={portfolioItem.id}
-              image={portfolioItem.image}
-              title={portfolioItem.title}
-              description={portfolioItem.description}
-              website={portfolioItem.website}
-              source={portfolioItem.source}
+          {/* {skills.map((skill) => (
+            <Skills
+              key={skill.id}
+              icon={skill.icon}
+              color={skill.color}
+              main={skill.main}
             />
-          ))}
+          ))} */}
         </Row>
         <Row>
           {portfolioItems.slice(3, 6).map((portfolioItem) => (
@@ -77,9 +77,6 @@ const Row = styled.div`
   margin-right: 30px;
   @media (max-width: 768px) {
     flex-direction: column;
-    /* justify-content: center; */
-    /* margin-let: auto;
-    margin-right: auto; */
   }
 `;
 
