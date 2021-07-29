@@ -14,16 +14,12 @@ function Experience(props) {
   return (
     <MDBCard background="dark" className="text-white">
       <MDBCardImages overlay src={props.image} alt="Experience" />
-      {/* <MDBCarouselElement
-        src="https://mdbcdn.b-cdn.net/img/new/slides/041.jpg"
-        alt="..."
-      /> */}
       <MDBCardOverlay>
         <MDBCardTitle>{props.title}</MDBCardTitle>
-        <SubTitleWrap>
+        <div>
           <MDBCardSubTitles>{props.subtitle}</MDBCardSubTitles>
           <MDBCardSubTitles>{props.date}</MDBCardSubTitles>
-        </SubTitleWrap>
+        </div>
         <MDBCardTexts>{props.achievements}</MDBCardTexts>
       </MDBCardOverlay>
     </MDBCard>
@@ -38,11 +34,6 @@ const MDBCardSubTitles = styled(MDBCardSubTitle)`
   @media (max-width: 768px) {
     font-size: 10px;
   }
-`;
-
-const SubTitleWrap = styled.div`
-  /* display: flex; */
-  /* justify-content: space-between; */
 `;
 
 const MDBCardTexts = styled(MDBCardText)`

@@ -2,6 +2,7 @@ const portfolioItems = [
   {
     id: 1,
     image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    alt: "1",
     title: "Amazon ECommerce Clone",
     description: "An ecommerce app",
     website: "https://amznjason.web.app/",
@@ -10,6 +11,7 @@ const portfolioItems = [
   {
     id: 2,
     image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    alt: "2",
     title: "Netflix Clone",
     description: "Scroll through movies and watch available trailers.",
     website: "https://jason-flix.web.app/",
@@ -18,6 +20,7 @@ const portfolioItems = [
   {
     id: 3,
     image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    alt: "3",
     title: "Tesla Landing Page",
     description: "A mockup landing page inspired by Tesla.",
     website: "https://jasons-tesla.web.app/",
@@ -26,15 +29,18 @@ const portfolioItems = [
   {
     id: 4,
     image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    alt: "4",
     title: "Leaf Note",
     description:
       "A MERN style app that allows users to write notes which are saved to an Atlas cluster.",
+
     website: "https://leaf-note.herokuapp.com/",
     source: "https://github.com/jNembhard/leafnote",
   },
   {
     id: 5,
     image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    alt: "5",
     title: "Whisper Secrets",
     description:
       "Have a secret that you don't want to tell anyone? Submit it anonymously!",
@@ -44,6 +50,7 @@ const portfolioItems = [
   {
     id: 6,
     image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    alt: "6",
     title: "Fetchbone",
     description: "A dog dating app landing page inspired by Tinder.",
     website: "https://jnembhard.github.io/fetchbone/",
@@ -52,6 +59,7 @@ const portfolioItems = [
   {
     id: 7,
     image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    alt: "7",
     title: "Quizzler",
     description: "A GUI Trivia app built with Python.",
     website: "https://www.google.com",
@@ -60,6 +68,7 @@ const portfolioItems = [
   {
     id: 8,
     image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    alt: "8",
     title: "ISS Tracker",
     description:
       "Built in Python. Tracks the International Space Station's position.",

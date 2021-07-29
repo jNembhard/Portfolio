@@ -13,9 +13,9 @@ import {
 
 function Card(props) {
   return (
-    <MDBCard style={{ maxWidth: "22rem" }}>
-      <MDBCardImage src={props.image} position="top" alt="Portfolio Images" />
-      <MDBCardBodyS>
+    <MDBCardS style={{ maxWidth: "22rem" }}>
+      <MDBCardImage src={props.image} position="top" alt={props.alt} />
+      <MDBCardBody>
         <MDBCardTitle>{props.title}</MDBCardTitle>
         <MDBCardText>{props.description}</MDBCardText>
         <ButtonWrap>
@@ -25,8 +25,8 @@ function Card(props) {
             Github
           </MDBBtnTwo>
         </ButtonWrap>
-      </MDBCardBodyS>
-    </MDBCard>
+      </MDBCardBody>
+    </MDBCardS>
   );
 }
 
@@ -48,11 +48,7 @@ const ButtonWrap = styled.div`
 const MDBIconS = styled(MDBIcon)`
   padding-right: 5px;
 `;
-const MDBCardBodyS = styled(MDBCardBody)`
-  /* position: relative; */
-  /* @media (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  } */
+
+const MDBCardS = styled(MDBCard)`
+  margin-bottom: 25px;
 `;

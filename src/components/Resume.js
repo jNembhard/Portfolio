@@ -87,6 +87,7 @@ const SliderWrap = styled.div`
 
   @media (max-width: 768px) {
     height: 600px;
+    margin-bottom: 100px;
   }
 
   & .arrow {
@@ -118,8 +119,6 @@ const Slider = styled.div`
 
   @media (max-width: 768px) {
     height: 100vh;
-    flex-direction: column;
-    justify-content: center;
   }
 `;
 

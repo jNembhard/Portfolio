@@ -26,21 +26,25 @@ export default function Skills(props) {
 
 const MDBCardBodyS = styled(MDBCardBody)`
   display: flex;
+  align-items: center;
 `;
 
 const TitleWrap = styled.div`
   display: flex;
-  margin-top: 12px;
+  margin-top: 5px;
   margin-left: 10px;
-  font: bold;
+  font-weight: 200;
 `;
 
 const Image = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
 `;
 
 const MDBCardS = styled(MDBCard)`
-  display: flex;
   margin-bottom: 10px;
+  margin-right: 10px;
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
 `;

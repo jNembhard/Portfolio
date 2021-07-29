@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import MuiAlert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
-
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 
 function Alert(props) {
@@ -23,6 +22,7 @@ function Contact(props) {
 
   const handleClick = (newState) => () => {
     setState({ open: true, ...newState });
+    // setDisable(true);
   };
 
   const handleSubmit = (event) => {
@@ -62,7 +62,7 @@ function Contact(props) {
   };
 
   return (
-    <ContactWrapper id="contact">
+    <div id="contact">
       <ContactContainer>
         <Left>
           <ContactHeading>Contact Me</ContactHeading>
@@ -106,7 +106,6 @@ function Contact(props) {
                 Send Message
               </MDBBtn>
               <Snackbar
-                // anchorOrigin={{vertical, horizontal}}
                 open={message}
                 autoHideDuration={null}
                 onClose={handleClose}
@@ -119,7 +118,6 @@ function Contact(props) {
           </form>
         </Left>
         <Right>
-          {/* <InfoContainer> */}
           <ContactInfo>
             <h2>Phone Number:</h2>
             +1 (703) 297-0357
@@ -128,18 +126,13 @@ function Contact(props) {
             <h2>E-mail Address:</h2>
             nembhardjl@outlook.com
           </ContactInfo>
-          {/* </InfoContainer> */}
         </Right>
       </ContactContainer>
-    </ContactWrapper>
+    </div>
   );
 }
 
 export default Contact;
-
-const ContactWrapper = styled.div`
-  /* position: relative; */
-`;
 
 const ContactContainer = styled.div`
   display: flex;
@@ -150,6 +143,9 @@ const ContactContainer = styled.div`
 
 const ContactHeading = styled.h2`
   font-size: 60px;
+  @media (max-width: 768px) {
+    font-size: 55px;
+  }
 `;
 const Left = styled.div`
   flex: 0.5;
@@ -157,18 +153,14 @@ const Left = styled.div`
 
   > form {
     margin-top: 20px;
-    /* margin-right: 20px; */
     display: flex;
     flex-direction: column;
     @media (max-width: 768px) {
       object-fit: contain;
-      /* max-width: 100%; */
     }
   }
 
   form > input {
-    /* display: block; */
-    /* width: 100%; */
     padding: 0 20px;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -184,8 +176,6 @@ const Left = styled.div`
   }
 
   form > textarea {
-    /* display: block; */
-    /* width: 100%; */
     padding: 0 20px;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -202,6 +192,10 @@ const Left = styled.div`
 
   @media (max-width: 768px) {
     padding: 32px 25px;
+
+    form > textarea {
+      height: 175px;
+    }
   }
 `;
 
@@ -215,9 +209,8 @@ const Right = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 100px;
-  /* max-width: 395px; */
   padding-left: 0;
-  padding-top: 63px;
+  padding-top: 90px;
 
   @media (max-width: 768px) {
     padding: 32px 25px;

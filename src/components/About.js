@@ -1,23 +1,25 @@
 import React from "react";
-import Tabs from "./Tabs";
+import MainSkills from "./MainSkills";
 import styled from "styled-components";
 
 function About() {
   return (
     <AboutWrap id="about">
       <HeaderContainer>
-        <ATitle>
-          <h2>About Me (Update with Amazon and Styling)</h2>
-        </ATitle>
-        <AInfo>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which dont look even slightly believable.
-          If you are going to use a passage of Lorem Ipsum,
-        </AInfo>
-        <ATabs>
-          <Tabs />
-        </ATabs>
+        <DescriptionWrap>
+          <DescriptionContainer>
+            <AboutTitle>
+              <h2>About Me</h2>
+            </AboutTitle>
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which dont look even slightly
+            believable. If you are going to use a passage of Lorem Ipsum,
+          </DescriptionContainer>
+          <MainSKillsWrap>
+            <MainSkills />
+          </MainSKillsWrap>
+        </DescriptionWrap>
       </HeaderContainer>
     </AboutWrap>
   );
@@ -27,24 +29,61 @@ export default About;
 
 const AboutWrap = styled.div`
   background-color: white;
-  display: flex;
+
   padding-bottom: 120px;
 
   @media (max-width: 768px) {
-    padding-bottom: 110px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+    align-items: center;
+    justify-content: center;
   }
 `;
-const ATitle = styled.div`
+const AboutTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
   > h2 {
     font-size: 60px;
   }
-`;
-const AInfo = styled.div``;
-const HeaderContainer = styled.div`
-  flex: 1;
-  position: relative;
+  @media (max-width: 768px) {
+    > h2 {
+      font-size: 55px;
+    }
+  }
 `;
 
-const ATabs = styled.div`
+const HeaderContainer = styled.div`
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const MainSKillsWrap = styled.div`
   padding-top: 30px;
+  background-color: yellow;
+  flex: 8;
+`;
+
+const DescriptionWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  height: 500px;
+
+  @media (max-width: 768px) {
+    height: 800px;
+    flex-direction: column;
+  }
+`;
+
+const DescriptionContainer = styled.div`
+  /* display: flex; */
+  height: 350px;
+  width: 350px;
+  background-color: lightblue;
 `;

@@ -51,6 +51,7 @@ const IntroWrapper = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    padding-bottom: 100px;
   }
 `;
 
@@ -96,28 +97,20 @@ const Title = styled.div`
 
   > h1 {
     font-size: 60px;
-    /* margin: 10px 0; */
-  }
-
-  > h3 {
-    font-size: 30px;
   }
 
   > h2 > span {
     font-size: inherit;
     color: crimson;
+    font-size: 30px;
   }
 
   @media (max-width: 768px) {
-    padding-left: 0;
     align-items: center;
+    justify-content: center;
 
     > h1 {
-      font-size: 40px;
-    }
-
-    > h3 {
-      font-size: 20px;
+      font-size: 50px;
     }
   }
 `;
