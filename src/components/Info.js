@@ -41,10 +41,10 @@ export default Info;
 const IntroWrapper = styled.div`
   background-color: white;
   display: flex;
-  overflow-x: hidden;
-  padding-bottom: 120px;
-
+  /* overflow: hidden; */
+  /* padding-bottom: 120px; */
   @media (max-width: 768px) {
+    object-fit: contain;
     flex-direction: column;
     align-items: center;
     padding-bottom: 160px;
@@ -62,8 +62,8 @@ const Right = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 700px;
-  height: 700px;
+  width: 1000px;
+  height: 1000px;
   background-color: crimson;
   border-radius: 50%;
   display: flex;
@@ -71,18 +71,10 @@ const ImageContainer = styled.div`
   justify-content: center;
   float: right;
 
-  > img {
-    height: 90%;
-  }
-
   @media (max-width: 768px) {
     align-items: flex-start;
-    width: 600px;
-    height: 600px;
-
-    > img {
-      height: 50%;
-    }
+    width: 400px;
+    height: 400px;
   }
 `;
 
@@ -93,23 +85,18 @@ const Title = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   > h1 {
     font-size: 60px;
   }
-
   > h2 > span {
     font-size: inherit;
     color: crimson;
     font-size: 30px;
   }
-
   @media (max-width: 768px) {
     align-items: center;
-    justify-content: center;
     padding-left: 0;
     padding-bottom: 80px;
-
     > h1 {
       font-size: 38px;
     }
@@ -120,7 +107,6 @@ const PortfolioAnchor = styled.div`
   position: absolute;
   bottom: 10px;
   left: 40%;
-
   @media (max-width: 768px) {
     left: 45%;
   }
@@ -137,15 +123,12 @@ const ChevronArrow = styled(MDBIcon)`
     100% {
       transform: translateY(0);
     }
-
     40% {
       transform: translateY(5px);
     }
-
     60% {
       transform: translateY(3px);
     }
   }
-
   animation: animateDown 1.5s infinite;
 `;

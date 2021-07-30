@@ -15,11 +15,11 @@ function About() {
               <p>
                 Hello! I’m Jason and I enjoy designing things that live on the
                 web. My interest in web development first began last year while
-                working on my capstone project at George Mason University. I had
-                been tasked with designing a layout for an Urban Air Mobility
-                (UAM) for passengers to purchase tickets and also design data
-                visualizations useful for comparing common forms of travel to
-                new UAM technology hosted online.
+                working on my capstone project at George Mason University. My
+                main focuses were to design an app layout for passengers to view
+                and purchase tickets to ride Urban Air Mobility (UAM) vehicles
+                and create data visualizations hosted online proving that UAM is
+                a faster way to travel when compared to cars and trains.
               </p>
               <p>
                 Fast forward to today, web development has been an exciting
@@ -45,9 +45,10 @@ const AboutWrap = styled.div`
   @media (max-width: 1143px) {
     display: flex;
     flex-direction: column;
-    padding-bottom: 200px;
+    /* padding-bottom: 200px; */
     align-items: center;
     justify-content: center;
+    object-fit: contain;
   }
 `;
 const AboutTitle = styled.div`

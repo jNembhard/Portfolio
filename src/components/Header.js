@@ -53,19 +53,21 @@ function Header(props) {
           </RightMenu>
 
           <BurgerNav modalOpen={modalOpen}>
-            {sides.map((side) => (
-              <ul key={side.id}>
-                <li key={side.id}>
-                  <a href={side.section}>{side.option}</a>
-                </li>
-              </ul>
-            ))}
-            <BtnNav>
-              <MDBBtns outline color="info">
-                Resume
-                <MDBIconS fas icon="download" />
-              </MDBBtns>
-            </BtnNav>
+            <div className="contain">
+              {sides.map((side) => (
+                <ul key={side.id}>
+                  <li key={side.id}>
+                    <a href={side.section}>{side.option}</a>
+                  </li>
+                </ul>
+              ))}
+              <BtnNav>
+                <MDBBtns outline color="info">
+                  Resume
+                  <MDBIconS fas icon="download" />
+                </MDBBtns>
+              </BtnNav>
+            </div>
           </BurgerNav>
         </div>
       </Container>
@@ -87,6 +89,10 @@ const Container = styled.div`
   > h1 {
     margin-left: 20px;
     margin-top: 10px;
+  }
+
+  .move {
+    padding: 50px;
   }
 `;
 
@@ -141,8 +147,7 @@ const BurgerNav = styled.div`
   @media (max-width: 539px) {
     height: 100vh;
     display: inherit;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -156,9 +161,12 @@ const BurgerNav = styled.div`
     transition: transform 0.2s ease-in-out;
     overflow: hidden;
 
+    & .contain {
+      margin-top: 20px;
+    }
     ul {
       list-style-type: none;
-      padding: 5px 0;
+      padding: 5px 10px;
       padding-left: 20px;
     }
 
@@ -187,15 +195,17 @@ const RightMenu = styled.div`
     justify-content: flex-end;
     margin-right: 15px;
     margin-top: 10px;
-    z-index: 101;
+    z-index: 10000;
+    /* position: -webkit-sticky;
+    position: sticky; */
+    position: absolute;
+    top: 5px;
+    left: 300px;
   }
 `;
 
 const CustomBurger = styled(Hamburger)`
   @media (max-width: 539px) {
     cursor: pointer;
-    z-index: 102;
-    background-color: blue;
-    color: green;
   }
 `;
