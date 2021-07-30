@@ -16,8 +16,9 @@ function Header(props) {
 
   const sides = [
     { id: 1, option: "About", section: "#about" },
-    { id: 2, option: "Portfolio", section: "#portfolio" },
-    { id: 3, option: "Contact ", section: "#contact" },
+    { id: 2, option: "Experience", section: "#experience" },
+    { id: 3, option: "Portfolio", section: "#portfolio" },
+    { id: 4, option: "Contact ", section: "#contact" },
   ];
 
   return (
@@ -52,17 +53,13 @@ function Header(props) {
           </RightMenu>
 
           <BurgerNav modalOpen={modalOpen}>
-            <ul>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#portfolio">Portfolio</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
+            {sides.map((side) => (
+              <ul key={side.id}>
+                <li key={side.id}>
+                  <a href={side.section}>{side.option}</a>
+                </li>
+              </ul>
+            ))}
             <BtnNav>
               <MDBBtns outline color="info">
                 Resume
@@ -86,6 +83,11 @@ const Container = styled.div`
   left: 0;
   right: 0;
   z-index: 1;
+
+  > h1 {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
 `;
 
 const HeaderNav = styled.div`
@@ -157,11 +159,11 @@ const BurgerNav = styled.div`
     ul {
       list-style-type: none;
       padding: 5px 0;
-      padding-left: 15px;
+      padding-left: 20px;
     }
 
     li {
-      padding: 15px 0;
+      padding: 5px 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
       a {
@@ -193,5 +195,7 @@ const CustomBurger = styled(Hamburger)`
   @media (max-width: 539px) {
     cursor: pointer;
     z-index: 102;
+    background-color: blue;
+    color: green;
   }
 `;

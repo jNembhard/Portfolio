@@ -14,9 +14,8 @@ function Resume() {
         );
   };
   return (
-    <SliderWrap>
+    <SliderWrap id="experience">
       <ResumeHeading>Experience</ResumeHeading>
-      {/* <div style={{ marginBottom: "-50px" }}> */}
       <SliderContainer>
         <Slider currentSlider={currentSlider}>
           {experiences.map((experience) => (
@@ -60,7 +59,6 @@ function Resume() {
           onClick={() => handleClick()}
         />
       </SliderContainer>
-      {/* </div> */}
     </SliderWrap>
   );
 }

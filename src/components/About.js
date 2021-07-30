@@ -42,7 +42,7 @@ export default About;
 const AboutWrap = styled.div`
   padding-bottom: 120px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1143px) {
     display: flex;
     flex-direction: column;
     padding-bottom: 200px;
@@ -53,11 +53,10 @@ const AboutWrap = styled.div`
 const AboutTitle = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 60px;
   > h2 {
     font-size: 60px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1143px) {
     > h2 {
       font-size: 55px;
     }
@@ -65,10 +64,10 @@ const AboutTitle = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-  @media (max-width: 768px) {
+  @media (max-width: 1143px) {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -76,7 +75,14 @@ const MainSKillsWrap = styled.div`
   padding-top: 30px;
   background-color: PeachPuff;
   flex: 8;
-  @media (max-width: 768px) {
+
+  @media (max-width: 1143px) {
+    border-radius: 20px;
+  }
+
+  @media (max-width: 738px) {
+    border-top-left-radius: 0px 0px;
+    border-top-right-radius: 0px 0px;
     border-bottom-left-radius: 20px 20px;
     border-bottom-right-radius: 20px 20px;
   }
@@ -88,8 +94,8 @@ const DescriptionWrap = styled.div`
   justify-content: center;
   height: 500px;
 
-  @media (max-width: 768px) {
-    height: 800px;
+  @media (max-width: 1143px) {
+    height: 700px;
     flex-direction: column;
   }
 `;
@@ -105,8 +111,13 @@ const DescriptionContainer = styled.div`
   margin-left: 10px;
   border-radius: 50px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1190px) {
+    height: 645px;
+  }
+
+  @media (max-width: 1143px) {
     width: 450px;
+    height: 500px;
     margin-left: 0;
 
     border-bottom-left-radius: 0px 0px;

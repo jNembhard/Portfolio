@@ -18,7 +18,7 @@ function Info() {
   return (
     <IntroWrapper>
       <Left>
-        <ImageContainer></ImageContainer>
+        <ImageContainer />
       </Left>
       <Right>
         <Title>
