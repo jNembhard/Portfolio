@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { init } from "ityped";
+import { MDBIcon } from "mdb-react-ui-kit";
 
 function Info() {
   const textRef = useRef();
@@ -17,12 +18,7 @@ function Info() {
   return (
     <IntroWrapper>
       <Left>
-        <ImageContainer>
-          <img
-            // src="https://c.stocksy.com/a/lwR200/z9/584087.jpg"
-            alt="portfolio intro"
-          />
-        </ImageContainer>
+        <ImageContainer></ImageContainer>
       </Left>
       <Right>
         <Title>
@@ -33,7 +29,7 @@ function Info() {
           </h2>
         </Title>
         <PortfolioAnchor>
-          <img alt="scroll down" />
+          <ChevronArrow color="black" size="3x" fas icon="chevron-down" />
         </PortfolioAnchor>
       </Right>
     </IntroWrapper>
@@ -51,7 +47,7 @@ const IntroWrapper = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    padding-bottom: 100px;
+    padding-bottom: 160px;
   }
 `;
 
@@ -81,12 +77,15 @@ const ImageContainer = styled.div`
 
   @media (max-width: 768px) {
     align-items: flex-start;
+    width: 600px;
+    height: 600px;
 
     > img {
       height: 50%;
     }
   }
 `;
+
 const Title = styled.div`
   width: 100%;
   height: 100%;
@@ -108,20 +107,45 @@ const Title = styled.div`
   @media (max-width: 768px) {
     align-items: center;
     justify-content: center;
+    padding-left: 0;
+    padding-bottom: 80px;
 
     > h1 {
-      font-size: 50px;
+      font-size: 38px;
     }
   }
 `;
 
-const PortfolioAnchor = styled.a`
+const PortfolioAnchor = styled.div`
   position: absolute;
   bottom: 10px;
   left: 40%;
 
-  > img {
-    width: 30px;
-    /* animation: perform arrow keyframes */
+  @media (max-width: 768px) {
+    left: 45%;
   }
+`;
+
+const ChevronArrow = styled(MDBIcon)`
+  overflow-x: hidden;
+  overflow-y: hidden;
+  @keyframes animateDown {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(5px);
+    }
+
+    60% {
+      transform: translateY(3px);
+    }
+  }
+
+  animation: animateDown 1.5s infinite;
 `;

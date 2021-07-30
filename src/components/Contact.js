@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import MuiAlert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
@@ -191,10 +190,10 @@ const Left = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding: 32px 25px;
+    padding: 32px 45px;
 
     form > textarea {
-      height: 175px;
+      height: 150px;
     }
   }
 `;

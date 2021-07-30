@@ -1,7 +1,7 @@
 const experienceDatasets = [
   {
     id: 1,
-    image: "https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg",
+    icon: "code",
     title: "Personal Projects",
     subtitle: "",
     date: "August 2020 - Present",
@@ -43,7 +43,7 @@ const experienceDatasets = [
   },
   {
     id: 2,
-    image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    icon: "lightbulb",
     title: "AlNembCo Services LLC",
     subtitle: "Electrician Associate",
     date: "June 2012 - Present",
@@ -71,9 +71,9 @@ const experienceDatasets = [
   },
   {
     id: 3,
-    image: "https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg",
+    icon: "user-graduate",
     title: "George Mason University (GMU)",
-    subtitle: "Rapid Reliable Urban Mobility System (RRUMS) Project Member",
+    subtitle: "RRUMS Project Member",
     date: "August 2019 - May 2020",
     achievements: [
       {
@@ -90,33 +90,25 @@ const experienceDatasets = [
       {
         id: 2,
         item: "Composed Business Case proposing 20% faster transportation with 97.9% reliability through the D.C. area.",
-        subitems: [
-          {
-            id: 1,
-            sub: "Detailed 10% penetration rate of high-value market with an anticipated 10-year profit forecast of $195.6M, and a 2-year breakeven point with an estimated 122.26% ROI at $200 per passenger ticket.",
-          },
-        ],
       },
-
       {
         id: 3,
-        item: "Designed mobile app layout in Adobe XD enabling passengers to purchase tickets, and view boarding, departure, and arrival information for expected UAM vehicles.",
+        item: "Detailed 10% penetration rate of high-value market with an anticipated 10-year profit forecast of $195.6M, and a 2-year breakeven point with an estimated 122.26% ROI at $200 per passenger ticket.",
       },
 
       {
         id: 4,
-        item: "Developed webpage visualizations in RStudio with RShiny to generate RRUMS transportation logistics output data at each arrival and departure location for up to a 24-day period.",
+        item: "Designed mobile app layout in Adobe XD enabling passengers to purchase tickets, and view boarding, departure, and arrival information for expected UAM vehicles.",
       },
 
       {
         id: 5,
-        item: "Defined Context, Stakeholder, and Enterprise Analyses.",
-        subitems: [
-          {
-            id: 1,
-            sub: "Used to set the stage for RRUMS development and define interactions between industry clients and the surrounding environment.",
-          },
-        ],
+        item: "Developed webpage visualizations in RStudio with RShiny to generate RRUMS transportation logistics output data at each arrival and departure location for up to a 24-day period.",
+      },
+
+      {
+        id: 6,
+        item: "Defined Context, Stakeholder, and Enterprise Analyses defining interactions between industry clients and the surrounding environment.",
       },
     ],
   },

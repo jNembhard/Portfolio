@@ -53,7 +53,7 @@ function Portfolio() {
         </MDBCollapse>
         <CollapseContainer>
           <MDBBtn outline color="dark" onClick={toggleShow}>
-            Show/Hide More Content
+            Show {showContent ? "Less" : "More"}
           </MDBBtn>
         </CollapseContainer>
       </RowWrap>

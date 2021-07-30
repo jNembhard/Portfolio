@@ -11,10 +11,22 @@ function About() {
             <AboutTitle>
               <h2>About Me</h2>
             </AboutTitle>
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which dont look even slightly
-            believable. If you are going to use a passage of Lorem Ipsum,
+            <PContainer>
+              <p>
+                Hello! I’m Jason and I enjoy designing things that live on the
+                web. My interest in web development first began last year while
+                working on my capstone project at George Mason University. I had
+                been tasked with designing a layout for an Urban Air Mobility
+                (UAM) for passengers to purchase tickets and also design data
+                visualizations useful for comparing common forms of travel to
+                new UAM technology hosted online.
+              </p>
+              <p>
+                Fast forward to today, web development has been an exciting
+                mixture of diving into new projects to pick up new skills and
+                utilizing new technologies.
+              </p>
+            </PContainer>
           </DescriptionContainer>
           <MainSKillsWrap>
             <MainSkills />
@@ -28,14 +40,12 @@ function About() {
 export default About;
 
 const AboutWrap = styled.div`
-  background-color: white;
-
   padding-bottom: 120px;
 
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     align-items: center;
     justify-content: center;
   }
@@ -64,15 +74,18 @@ const HeaderContainer = styled.div`
 
 const MainSKillsWrap = styled.div`
   padding-top: 30px;
-  background-color: yellow;
+  background-color: PeachPuff;
   flex: 8;
+  @media (max-width: 768px) {
+    border-bottom-left-radius: 20px 20px;
+    border-bottom-right-radius: 20px 20px;
+  }
 `;
 
 const DescriptionWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
   height: 500px;
 
   @media (max-width: 768px) {
@@ -81,9 +94,22 @@ const DescriptionWrap = styled.div`
   }
 `;
 
+const PContainer = styled.div`
+  margin-left: 20px;
+  margin-right: 20px;
+`;
 const DescriptionContainer = styled.div`
-  /* display: flex; */
-  height: 350px;
-  width: 350px;
-  background-color: lightblue;
+  height: 500px;
+  width: 500px;
+  background-color: SkyBlue;
+  margin-left: 10px;
+  border-radius: 50px;
+
+  @media (max-width: 768px) {
+    width: 450px;
+    margin-left: 0;
+
+    border-bottom-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+  }
 `;
