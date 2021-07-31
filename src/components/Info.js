@@ -44,9 +44,12 @@ const IntroWrapper = styled.div`
   padding-bottom: 120px;
 
   @media (max-width: 768px) {
-    /* flex-direction: column; */
     align-items: center;
     padding-bottom: 280px;
+  }
+
+  @media (max-width: 414px) {
+    padding-bottom: 290px;
   }
 `;
 
@@ -55,6 +58,12 @@ const Left = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  @media (max-width: 768px) {
+    padding-top: 100px;
+  }
+  @media (max-width: 414px) {
+    padding-top: 100px;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -80,7 +89,7 @@ const ImageContainer = styled.div`
     width: 300px;
     height: 300px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 414px) {
     padding-top: 150px;
   }
 `;
@@ -141,10 +150,6 @@ const Title = styled.div`
       font-size: 16px;
     }
   }
-
-  @media (max-width: 375px) {
-    /* padding-top: 200px; */
-  }
 `;
 
 const PortfolioAnchor = styled.div`
@@ -157,8 +162,8 @@ const PortfolioAnchor = styled.div`
     bottom: 20px;
   }
 
-  @media (max-width: 499px) {
-    bottom: 450px;
+  @media (max-width: 414px) {
+    bottom: 150px;
   }
 `;
 

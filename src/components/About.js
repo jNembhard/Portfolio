@@ -48,7 +48,10 @@ const AboutWrap = styled.div`
     padding-bottom: 200px;
     align-items: center;
     justify-content: center;
-    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    margin: 20px 0;
   }
 `;
 const AboutTitle = styled.div`
@@ -81,11 +84,16 @@ const MainSKillsWrap = styled.div`
     border-radius: 20px;
   }
 
-  @media (max-width: 738px) {
+  @media (max-width: 768px) {
     border-top-left-radius: 0px 0px;
     border-top-right-radius: 0px 0px;
     border-bottom-left-radius: 20px 20px;
     border-bottom-right-radius: 20px 20px;
+    width: 450px;
+  }
+
+  @media (max-width: 414px) {
+    width: 400px;
   }
 `;
 
@@ -104,6 +112,11 @@ const DescriptionWrap = styled.div`
 const PContainer = styled.div`
   margin-left: 20px;
   margin-right: 20px;
+
+  @media (max-width: 414px) {
+    marign-right: 40px;
+    margin-left: 40px;
+  }
 `;
 const DescriptionContainer = styled.div`
   height: 500px;
@@ -123,5 +136,9 @@ const DescriptionContainer = styled.div`
 
     border-bottom-left-radius: 0px 0px;
     border-bottom-right-radius: 0px 0px;
+  }
+
+  @media (max-width: 414px) {
+    width: 400px;
   }
 `;

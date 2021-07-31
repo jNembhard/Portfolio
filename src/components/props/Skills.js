@@ -9,7 +9,7 @@ export default function Skills(props) {
         {props.image ? (
           <Image src={props.image} alt="icon images" />
         ) : (
-          <MDBIcon
+          <MDBIcons
             fab
             icon={props.icon}
             size="3x"
@@ -27,8 +27,16 @@ export default function Skills(props) {
 const MDBCardBodyS = styled(MDBCardBody)`
   display: flex;
   align-items: center;
+
+  @media (max-width: 414px) {
+    width: 170px;
+    height: 100px;
+  }
 `;
 
+const MDBIcons = styled(MDBIcon)`
+  ${(props) => (props.size ? 0 : 100)}
+`;
 const TitleWrap = styled.div`
   display: flex;
   margin-top: 5px;
@@ -39,12 +47,19 @@ const TitleWrap = styled.div`
 const Image = styled.img`
   width: 48px;
   height: 48px;
+
+  @media (max-width: 414px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const MDBCardS = styled(MDBCard)`
   margin-bottom: 10px;
   margin-right: 10px;
-  @media (max-width: 768px) {
-    margin-right: 0;
+
+  @media (max-width: 414px) {
+    right: 9px;
+    left: 0;
   }
 `;

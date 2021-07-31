@@ -67,7 +67,7 @@ export default Resume;
 
 const SliderWrap = styled.div`
   margin-bottom: 150px;
-  /* background-color: orange; */
+
   @media (max-width: 768px) {
     height: 1750px;
     margin-bottom: 100px;

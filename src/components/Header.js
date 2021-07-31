@@ -101,7 +101,7 @@ const Container = styled.div`
 const HeaderNav = styled.div`
   display: flex;
 
-  @media (max-width: 738px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -146,7 +146,7 @@ const AnchorLine = styled.a`
 
 const BurgerNav = styled.div`
   display: none;
-  @media (max-width: 738px) {
+  @media (max-width: 768px) {
     height: 100vh;
     display: inherit;
     position: fixed;
@@ -192,7 +192,7 @@ const BurgerNav = styled.div`
 const RightMenu = styled.div`
   display: none;
 
-  @media (max-width: 738px) {
+  @media (max-width: 768px) {
     display: flex;
     justify-content: flex-end;
     z-index: 102;
@@ -203,7 +203,7 @@ const RightMenu = styled.div`
 `;
 
 const CustomBurger = styled(Hamburger)`
-  @media (max-width: 738px) {
+  @media (max-width: 768px) {
     cursor: pointer;
   }
 `;
