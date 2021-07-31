@@ -17,7 +17,7 @@ function Contact(props) {
     horizontal: "center",
   });
 
-  const { vertical, horizontal, open } = state;
+  // const { vertical, horizontal, open } = state;
 
   const handleClick = (newState) => () => {
     setState({ open: true, ...newState });

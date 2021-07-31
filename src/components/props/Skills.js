@@ -9,7 +9,7 @@ export default function Skills(props) {
         {props.image ? (
           <Image src={props.image} alt="icon images" />
         ) : (
-          <MDBIcons
+          <MDBIcon
             fab
             icon={props.icon}
             size="3x"
@@ -17,7 +17,7 @@ export default function Skills(props) {
           />
         )}
         <TitleWrap>
-          <MDBCardTitle>{props.main}</MDBCardTitle>
+          <MDBCardTitle className="font-size">{props.main}</MDBCardTitle>
         </TitleWrap>
       </MDBCardBodyS>
     </MDBCardS>
@@ -29,19 +29,23 @@ const MDBCardBodyS = styled(MDBCardBody)`
   align-items: center;
 
   @media (max-width: 414px) {
-    width: 170px;
+    width: 175px;
     height: 100px;
   }
 `;
 
-const MDBIcons = styled(MDBIcon)`
-  ${(props) => (props.size ? 0 : 100)}
-`;
 const TitleWrap = styled.div`
   display: flex;
   margin-top: 5px;
   margin-left: 10px;
   font-weight: 200;
+
+  @media (max-width: 414px) {
+    margin-left: 9px;
+    & .font-size {
+      font-size: 18px;
+    }
+  }
 `;
 
 const Image = styled.img`
@@ -59,7 +63,7 @@ const MDBCardS = styled(MDBCard)`
   margin-right: 10px;
 
   @media (max-width: 414px) {
-    right: 9px;
-    left: 0;
+    margin-right: 1px;
+    left: -3.5px;
   }
 `;
