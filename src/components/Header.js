@@ -29,10 +29,8 @@ function Header(props) {
         <div>
           <HeaderNav>
             {sides.map((side) => (
-              <HeaderOption>
-                <AnchorLine key={side.id} href={side.section}>
-                  {side.option}
-                </AnchorLine>
+              <HeaderOption key={side.id}>
+                <AnchorLine href={side.section}>{side.option}</AnchorLine>
               </HeaderOption>
             ))}
             <HeaderBtnWrap>

@@ -19,7 +19,7 @@ function Resume() {
       <SliderContainer>
         <Slider currentSlider={currentSlider}>
           {experiences.map((experience) => (
-            <Container>
+            <Container key={experience.id}>
               <Item>
                 <Left>
                   <LeftContainer>
@@ -35,8 +35,8 @@ function Resume() {
                 <RightContainer>
                   <Right>
                     {experience.achievements.map((achievement) => (
-                      <ul>
-                        <li key={achievement.id}>{achievement.item}</li>
+                      <ul key={achievement.id}>
+                        <li>{achievement.item}</li>
                       </ul>
                     ))}
                   </Right>

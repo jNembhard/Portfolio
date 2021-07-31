@@ -18,6 +18,7 @@ function Portfolio() {
               key={portfolioItem.id}
               image={portfolioItem.image}
               title={portfolioItem.title}
+              alt={portfolioItem.alt}
               description={portfolioItem.description}
               website={portfolioItem.website}
               source={portfolioItem.source}
@@ -32,6 +33,7 @@ function Portfolio() {
                 key={portfolioItem.id}
                 image={portfolioItem.image}
                 title={portfolioItem.title}
+                alt={portfolioItem.alt}
                 description={portfolioItem.description}
                 website={portfolioItem.website}
                 source={portfolioItem.source}
@@ -44,6 +46,7 @@ function Portfolio() {
                 key={portfolioItem.id}
                 image={portfolioItem.image}
                 title={portfolioItem.title}
+                alt={portfolioItem.alt}
                 description={portfolioItem.description}
                 website={portfolioItem.website}
                 source={portfolioItem.source}
