@@ -56,8 +56,10 @@ function Header(props) {
             <div className="contain">
               {sides.map((side) => (
                 <ul key={side.id}>
-                  <li key={side.id}>
-                    <a href={side.section}>{side.option}</a>
+                  <li key={side.id} onClick={() => setModalOpen(false)}>
+                    <a onClick={() => allowScroll()} href={side.section}>
+                      {side.option}
+                    </a>
                   </li>
                 </ul>
               ))}
@@ -99,7 +101,7 @@ const Container = styled.div`
 const HeaderNav = styled.div`
   display: flex;
 
-  @media (max-width: 539px) {
+  @media (max-width: 738px) {
     display: none;
   }
 `;
@@ -144,7 +146,7 @@ const AnchorLine = styled.a`
 
 const BurgerNav = styled.div`
   display: none;
-  @media (max-width: 539px) {
+  @media (max-width: 738px) {
     height: 100vh;
     display: inherit;
     position: fixed;
@@ -190,22 +192,18 @@ const BurgerNav = styled.div`
 const RightMenu = styled.div`
   display: none;
 
-  @media (max-width: 539px) {
+  @media (max-width: 738px) {
     display: flex;
     justify-content: flex-end;
-    margin-right: 15px;
-    margin-top: 10px;
-    z-index: 10000;
-    /* position: -webkit-sticky;
-    position: sticky; */
+    z-index: 102;
     position: absolute;
     top: 5px;
-    left: 300px;
+    right: 15px;
   }
 `;
 
 const CustomBurger = styled(Hamburger)`
-  @media (max-width: 539px) {
+  @media (max-width: 738px) {
     cursor: pointer;
   }
 `;

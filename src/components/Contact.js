@@ -21,7 +21,6 @@ function Contact(props) {
 
   const handleClick = (newState) => () => {
     setState({ open: true, ...newState });
-    // setDisable(true);
   };
 
   const handleSubmit = (event) => {
@@ -212,7 +211,7 @@ const Right = styled.div`
   padding-top: 90px;
 
   @media (max-width: 768px) {
-    padding: 32px 25px;
+    padding: 32px 45px;
   }
 `;
 

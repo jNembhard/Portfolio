@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 function About() {
   return (
-    <AboutWrap id="about">
+    <AboutWrap>
       <HeaderContainer>
         <DescriptionWrap>
           <DescriptionContainer>
-            <AboutTitle>
+            <AboutTitle id="about">
               <h2>About Me</h2>
             </AboutTitle>
             <PContainer>
@@ -45,7 +45,7 @@ const AboutWrap = styled.div`
   @media (max-width: 1143px) {
     display: flex;
     flex-direction: column;
-    /* padding-bottom: 200px; */
+    padding-bottom: 200px;
     align-items: center;
     justify-content: center;
     object-fit: contain;
