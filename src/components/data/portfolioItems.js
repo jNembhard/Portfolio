@@ -1,16 +1,17 @@
 const portfolioItems = [
   {
     id: 1,
-    image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    image: process.env.PUBLIC_URL + "images/portfolio_images/amazon_web.jpeg",
     alt: "Amazon",
-    title: "Amazon ECommerce Clone",
+    title: "Amazon e-Commerce Clone",
     description: "An ecommerce app",
     website: "https://amznjason.web.app/",
     source: "https://github.com/jNembhard/amzn-ecommerce",
   },
   {
     id: 2,
-    image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    image:
+      process.env.PUBLIC_URL + "images/portfolio_images/jasonflix_web.jpeg",
     alt: "Netflix",
     title: "Netflix Clone",
     description: "Scroll through movies and watch available trailers.",
@@ -19,7 +20,8 @@ const portfolioItems = [
   },
   {
     id: 3,
-    image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    image:
+      process.env.PUBLIC_URL + "images/portfolio_images/jasons_tesla_web.jpeg",
     alt: "Tesla",
     title: "Tesla Landing Page",
     description: "A mockup landing page inspired by Tesla.",
@@ -28,7 +30,8 @@ const portfolioItems = [
   },
   {
     id: 4,
-    image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    image:
+      process.env.PUBLIC_URL + "images/portfolio_images/leaf_note_web.jpeg",
     alt: "Leaf Note App",
     title: "Leaf Note",
     description:
@@ -39,7 +42,9 @@ const portfolioItems = [
   },
   {
     id: 5,
-    image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    image:
+      process.env.PUBLIC_URL +
+      "images/portfolio_images/whisper_secrets_web.jpeg",
     alt: "Secrets App",
     title: "Whisper Secrets",
     description:
@@ -49,7 +54,8 @@ const portfolioItems = [
   },
   {
     id: 6,
-    image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    image:
+      process.env.PUBLIC_URL + "images/portfolio_images/fetchbone_web.jpeg",
     alt: "Fetchbone Landing Page",
     title: "Fetchbone",
     description: "A dog dating app landing page inspired by Tinder.",
@@ -58,21 +64,22 @@ const portfolioItems = [
   },
   {
     id: 7,
-    image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    image: process.env.PUBLIC_URL + "images/portfolio_images/quizzler_web.jpeg",
     alt: "Quizzler App",
     title: "Quizzler",
     description: "A GUI Trivia app built with Python.",
-    website: "https://www.google.com",
+    website: "",
     source: "https://github.com/jNembhard/Quizzler",
   },
   {
     id: 8,
-    image: process.env.PUBLIC_URL + "images/carousel/light_bulb.jpg",
+    image:
+      process.env.PUBLIC_URL + "images/portfolio_images/iss_tracker_web.jpeg",
     alt: "ISS Tracker App",
     title: "ISS Tracker",
     description:
       "Built in Python. Tracks the International Space Station's position.",
-    website: "www.google.com",
+    website: "",
     source: "https://github.com/jNembhard/iss_tracker",
   },
 ];

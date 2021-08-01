@@ -95,7 +95,7 @@ const Row = styled.div`
   justify-content: space-around;
   margin-left: 30px;
   margin-right: 30px;
-  @media (max-width: 768px) {
+  @media (max-width: 1043px) {
     flex-direction: column;
     align-items: center;
   }
