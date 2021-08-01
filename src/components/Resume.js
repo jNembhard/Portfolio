@@ -67,14 +67,19 @@ export default Resume;
 
 const SliderWrap = styled.div`
   margin-bottom: 150px;
+  overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (max-width: 897px) {
     height: 1750px;
     margin-bottom: 100px;
   }
+
   @media (max-width: 500px) {
     height: 2400px;
     margin-bottom: 100px;
+  }
+  @media only screen and (max-width: 896px) and (orientation: landscape) {
+    width: 880px;
   }
 `;
 const SliderContainer = styled.div`
@@ -82,12 +87,12 @@ const SliderContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: crimson;
-  flex-direction: column;
   height: 600px;
   position: relative;
 
-  @media (max-width: 768px) {
+  @media (max-width: 897px) {
     height: 1675px;
+    flex-direction: column;
 
     & .arrow {
       display: none;
@@ -117,7 +122,7 @@ const ResumeHeading = styled.h2`
   font-size: 60px;
   display: flex;
   justify-content: center;
-  @media (max-width: 768px) {
+  @media (max-width: 897px) {
     font-size: 55px;
   }
 `;
@@ -129,7 +134,7 @@ const Slider = styled.div`
   transform: translateX(${(props) => -props.currentSlider * 100}vw);
   transition: all 1s ease-out;
 
-  @media (max-width: 768px) {
+  @media (max-width: 897px) {
     height: 73%;
     flex-direction: column;
   }
@@ -144,7 +149,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 768px) {
+
+  @media (max-width: 897px) {
     margin-bottom: 50px;
   }
 `;
@@ -158,15 +164,16 @@ const Item = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 897px) {
     width: 90%;
-    height: 250px;
+    height: 217px;
     margin: 5px 0;
     margin-bottom: 180px;
   }
 
   @media (max-width: 500px) {
     width: 95%;
+    height: 250px;
     margin-bottom: 400px;
   }
 `;
@@ -181,7 +188,7 @@ const Left = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 897px) {
     flex: 3;
   }
 `;
@@ -197,7 +204,7 @@ const Right = styled.div`
     margin-top: -3px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 897px) {
     height: 70%;
   }
 `;

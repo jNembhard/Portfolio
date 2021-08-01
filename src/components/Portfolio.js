@@ -69,6 +69,11 @@ export default Portfolio;
 const PortfolioWrapper = styled.div`
   max-width: 100vw;
   padding-bottom: 120px;
+
+  @media only screen and (max-width: 896px) and (orientation: landscape) {
+    width: 1000px;
+  }
+
   @media (max-width: 768px) {
     padding-bottom: 60px;
   }

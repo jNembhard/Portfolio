@@ -6,7 +6,7 @@ function Footer() {
   const date = new Date().getFullYear();
 
   return (
-    <FooterWrapper>
+    <div>
       <FooterContainer>
         <Middle>
           <BtnWrapOne>
@@ -31,13 +31,11 @@ function Footer() {
         </Middle>
         <End>Copyright © {date} Jason Nembhard</End>
       </FooterContainer>
-    </FooterWrapper>
+    </div>
   );
 }
 
 export default Footer;
-
-const FooterWrapper = styled.div``;
 
 const FooterContainer = styled.div`
   height: 110px;
@@ -51,6 +49,10 @@ const FooterContainer = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
+  }
+
+  @media only screen and (max-width: 896px) and (orientation: landscape) {
+    width: 1000px;
   }
 `;
 

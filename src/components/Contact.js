@@ -137,6 +137,10 @@ const ContactContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
   }
+
+  @media only screen and (max-width: 896px) and (orientation: landscape) {
+    width: 1000px;
+  }
 `;
 
 const ContactHeading = styled.h2`

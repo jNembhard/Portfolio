@@ -28,7 +28,6 @@ function Info() {
           </Title>
         </ImageContainer>
       </Left>
-
       <PortfolioAnchor>
         <ChevronArrow color="black" size="3x" fas icon="chevron-down" />
       </PortfolioAnchor>
@@ -48,8 +47,8 @@ const IntroWrapper = styled.div`
     padding-bottom: 280px;
   }
 
-  @media (max-width: 414px) {
-    padding-bottom: 290px;
+  @media (max-width: 414px) and (orientation: portrait) {
+    padding-bottom: 500px;
   }
 `;
 
@@ -77,6 +76,10 @@ const ImageContainer = styled.div`
   float: right;
   padding-top: 200px;
 
+  @media only screen and (max-width: 896px) and (orientation: landscape) {
+    width: 500px;
+    height: 500px;
+  }
   @media (max-width: 768px) {
     align-items: flex-start;
     justify-content: center;
@@ -89,7 +92,8 @@ const ImageContainer = styled.div`
     width: 300px;
     height: 300px;
   }
-  @media (max-width: 414px) {
+
+  @media (max-width: 414px) and (orientation: portrait) {
     padding-top: 150px;
   }
 `;
@@ -133,7 +137,6 @@ const Title = styled.div`
   }
 
   @media (max-width: 500px) {
-    padding-bottom: 730px;
     padding-left: 55px;
     > h1 {
       font-size: 40px;
@@ -150,20 +153,39 @@ const Title = styled.div`
       font-size: 16px;
     }
   }
+
+  @media (max-width: 414px) {
+    padding-bottom: 730px;
+  }
+
+  @media only screen and (max-width: 896px) and (orientation: landscape) {
+    > h1 {
+      /* font-size: 40px; */
+    }
+  }
 `;
 
 const PortfolioAnchor = styled.div`
   position: absolute;
-  bottom: 2px;
   left: 70%;
+  top: 85%;
+
+  @media only screen and (max-width: 896px) and (orientation: landscape) {
+    left: 87%;
+    top: 140%;
+  }
+
+  @media (width: 736px) and (height: 414px) {
+    display: none;
+  }
 
   @media (max-width: 768px) {
     left: 45%;
-    bottom: 20px;
+    top: 90%;
   }
 
   @media (max-width: 414px) {
-    bottom: 150px;
+    top: 75%;
   }
 `;
 
