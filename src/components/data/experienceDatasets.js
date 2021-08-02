@@ -72,7 +72,7 @@ const experienceDatasets = [
   {
     id: 3,
     icon: "user-graduate",
-    title: "George Mason University (GMU)",
+    title: "George Mason University",
     subtitle: "RRUMS Project Member",
     date: "August 2019 - May 2020",
     achievements: [

@@ -125,8 +125,8 @@ const DescriptionContainer = styled.div`
   margin-left: 10px;
   border-radius: 50px;
 
-  @media (max-width: 1190px) {
-    height: 645px;
+  @media (max-width: 1206px) {
+    height: 640px;
   }
 
   @media (max-width: 1143px) {

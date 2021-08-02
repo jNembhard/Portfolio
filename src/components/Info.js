@@ -157,12 +157,6 @@ const Title = styled.div`
   @media (max-width: 414px) {
     padding-bottom: 730px;
   }
-
-  @media only screen and (max-width: 896px) and (orientation: landscape) {
-    > h1 {
-      /* font-size: 40px; */
-    }
-  }
 `;
 
 const PortfolioAnchor = styled.div`

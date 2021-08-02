@@ -29,7 +29,7 @@ export default App;
 const AppWrap = styled.div`
   @media only screen and (max-width: 896px) and (orientation: landscape) {
     & .boundary {
-      padding-left: 200px;
+      padding-left: 100px;
     }
   }
 `;

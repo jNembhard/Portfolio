@@ -68,14 +68,25 @@ export default Resume;
 const SliderWrap = styled.div`
   margin-bottom: 150px;
   overflow: hidden;
-
   @media (max-width: 897px) {
     height: 1750px;
     margin-bottom: 100px;
   }
 
+  @media (max-width: 812px) {
+    height: 2150px;
+  }
+
+  @media (max-width: 762px) {
+    height: 1800px;
+  }
+
+  @media (max-width: 600px) {
+    height: 2000px;
+  }
+
   @media (max-width: 500px) {
-    height: 2400px;
+    height: 2450px;
     margin-bottom: 100px;
   }
   @media only screen and (max-width: 896px) and (orientation: landscape) {
@@ -90,31 +101,49 @@ const SliderContainer = styled.div`
   height: 600px;
   position: relative;
 
+  & .arrow {
+    height: 50px;
+    position: absolute;
+  }
+  & .left {
+    left: 100px;
+    transform: rotateY(180deg);
+  }
+  & .right {
+    right: 100px;
+  }
+
+  @media (max-width: 1171px) {
+    & .left {
+      left: 30px;
+    }
+    & .right {
+      right: 30px;
+    }
+  }
+
   @media (max-width: 897px) {
     height: 1675px;
     flex-direction: column;
-
     & .arrow {
       display: none;
     }
   }
 
+  @media (max-width: 812px) {
+    height: 2150px;
+  }
+
+  @media (max-width: 762px) {
+    height: 1800px;
+  }
+
+  @media (max-width: 600px) {
+    height: 2000px;
+  }
+
   @media (max-width: 500px) {
-    height: 2350px;
-  }
-
-  & .arrow {
-    height: 50px;
-    position: absolute;
-  }
-
-  & .left {
-    left: 100px;
-    transform: rotateY(180deg);
-  }
-
-  & .right {
-    right: 100px;
+    height: 2450px;
   }
 `;
 
@@ -133,12 +162,10 @@ const Slider = styled.div`
   left: 0;
   transform: translateX(${(props) => -props.currentSlider * 100}vw);
   transition: all 1s ease-out;
-
-  @media (max-width: 897px) {
+  @media (max-width: 896px) {
     height: 73%;
     flex-direction: column;
   }
-
   @media (max-width: 500px) {
     height: 70%;
   }
@@ -149,28 +176,52 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 896px) {
+    margin-bottom: 50px;
+    padding-right: 200px;
+  }
 
-  @media (max-width: 897px) {
+  @media (max-width: 895px) {
+    width: 90%;
+    margin-bottom: 80px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: 812px) {
+    width: 80%;
+    margin-bottom: 100px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: 762px) {
+    width: 70%;
+    margin-bottom: 120px;
+  }
+
+  @media (max-width: 600px) {
+    width: 100vw;
+    margin-bottom: 180px;
+  }
+
+  @media (max-width: 500px) {
     margin-bottom: 50px;
   }
 `;
 
 const Item = styled.div`
   width: 900px;
-  height: 45%;
-  background-color: white;
+  height: 50%;
+  background-color: SandyBrown;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   @media (max-width: 897px) {
     width: 90%;
     height: 217px;
     margin: 5px 0;
     margin-bottom: 180px;
   }
-
   @media (max-width: 500px) {
     width: 95%;
     height: 250px;
@@ -187,7 +238,6 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   @media (max-width: 897px) {
     flex: 3;
   }
@@ -199,11 +249,9 @@ const Right = styled.div`
   border-radius: 20px;
   align-items: center;
   height: 20%;
-
   ul > li {
     margin-top: -3px;
   }
-
   @media (max-width: 897px) {
     height: 70%;
   }
@@ -215,24 +263,21 @@ const RightContainer = styled.div`
 `;
 
 const LeftContainer = styled.div`
-  width: 90%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
   > h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
-
   > p {
     font-size: 12.5px;
+    font-weight: 600;
   }
-
   > span {
     font-size: 12px;
-    font-weight: 600;
-    text-decoration: underline;
+    font-weight: 500;
     margin-top: 0;
   }
 `;
@@ -245,7 +290,6 @@ const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   & .image {
     height: 40px;
     margin-top: 25px;
