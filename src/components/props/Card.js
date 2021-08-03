@@ -19,7 +19,7 @@ function Card(props) {
         <MDBCardTitle>{props.title}</MDBCardTitle>
         <MDBCardText>{props.description}</MDBCardText>
         <ButtonWrap>
-          <MDBBtnOne href={props.website}>Website</MDBBtnOne>
+          {props.website && <MDBBtnOne href={props.website}>Website</MDBBtnOne>}
           <MDBBtnTwo style={{ backgroundColor: "#333333" }} href={props.source}>
             <MDBIconS fab icon="github" />
             Github

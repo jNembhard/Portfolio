@@ -140,7 +140,15 @@ const Title = styled.div`
     }
   }
 
+  @media (min-width: 601px) and (max-width: 766px) {
+    top: 56.25%;
+  }
+
+  @media (max-width: 600px) {
+    top: 54.25%;
+  }
   @media (max-width: 500px) {
+    top: 36.25%;
     padding-left: 55px;
     > h1 {
       font-size: 40px;
@@ -159,7 +167,20 @@ const Title = styled.div`
   }
 
   @media (max-width: 414px) {
+    top: 42.25%;
     padding-bottom: 730px;
+  }
+
+  @media (max-width: 376px) {
+    top: 40.25%;
+  }
+
+  @media (max-width: 361px) {
+    top: 45%;
+  }
+  @media (max-width: 320px) {
+    top: 56%;
+    padding-left: 50px;
   }
 `;
 
@@ -168,7 +189,7 @@ const PortfolioAnchor = styled.div`
   left: 70%;
   top: 56.25%;
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1285px) {
     top: 85.25%;
   }
 
@@ -186,8 +207,18 @@ const PortfolioAnchor = styled.div`
     top: 55%;
   }
 
-  @media (max-width: 414px) {
+  @media (min-width: 601px) and (max-width: 766px) {
+    left: 80%;
     top: 75%;
+  }
+
+  @media (max-width: 600px) {
+    top: 90%;
+    left: 46.25%;
+  }
+
+  @media (max-width: 414px) {
+    top: 80%;
   }
 `;
 

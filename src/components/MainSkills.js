@@ -51,7 +51,6 @@ const RowWrap = styled.div`
 const Row = styled.div`
   display: flex;
   justify-content: center;
-
   padding: 5px;
 
   @media (max-width: 768px) {
