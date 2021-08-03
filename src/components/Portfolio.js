@@ -83,6 +83,7 @@ const PortfolioHeading = styled.h2`
   font-size: 60px;
   display: flex;
   justify-content: center;
+
   @media (max-width: 768px) {
     font-size: 55px;
   }

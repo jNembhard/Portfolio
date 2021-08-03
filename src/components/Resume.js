@@ -66,44 +66,42 @@ function Resume() {
 export default Resume;
 
 const SliderWrap = styled.div`
+  height: 1000px;
   margin-bottom: 150px;
-  overflow: hidden;
-  @media (max-width: 897px) {
-    height: 1750px;
-    margin-bottom: 100px;
-  }
 
-  @media (max-width: 812px) {
-    height: 2150px;
-  }
-
-  @media (max-width: 762px) {
+  @media (max-width: 768px) {
     height: 1800px;
   }
 
-  @media (max-width: 600px) {
-    height: 2000px;
+  @media (max-width: 500px) {
+    height: 2650px;
   }
 
-  @media (max-width: 500px) {
-    height: 2450px;
-    margin-bottom: 100px;
+  @media (max-width: 376px) {
+    height: 3200px;
   }
-  @media only screen and (max-width: 896px) and (orientation: landscape) {
-    width: 880px;
+
+  @media (max-width: 321px) {
+    height: 4300px;
   }
 `;
+
 const SliderContainer = styled.div`
+  background-color: crimson;
+  height: 500px;
   display: flex;
+  position: absolute;
   align-items: center;
   justify-content: center;
-  background-color: crimson;
-  height: 600px;
+  overflow: hidden;
   position: relative;
+  left: 0;
+  transition: all 1s ease-out;
 
   & .arrow {
     height: 50px;
     position: absolute;
+    cursor: pointer;
   }
   & .left {
     left: 100px;
@@ -113,37 +111,25 @@ const SliderContainer = styled.div`
     right: 100px;
   }
 
-  @media (max-width: 1171px) {
-    & .left {
-      left: 30px;
-    }
-    & .right {
-      right: 30px;
-    }
-  }
-
-  @media (max-width: 897px) {
-    height: 1675px;
+  @media (max-width: 768px) {
     flex-direction: column;
+    top: 0;
+    height: 1300px;
     & .arrow {
       display: none;
     }
   }
 
-  @media (max-width: 812px) {
-    height: 2150px;
-  }
-
-  @media (max-width: 762px) {
-    height: 1800px;
-  }
-
-  @media (max-width: 600px) {
-    height: 2000px;
-  }
-
   @media (max-width: 500px) {
-    height: 2450px;
+    height: 2250px;
+  }
+
+  @media (max-width: 376px) {
+    height: 3200px;
+  }
+
+  @media (max-width: 321px) {
+    height: 4300px;
   }
 `;
 
@@ -151,10 +137,8 @@ const ResumeHeading = styled.h2`
   font-size: 60px;
   display: flex;
   justify-content: center;
-  @media (max-width: 897px) {
-    font-size: 55px;
-  }
 `;
+
 const Slider = styled.div`
   height: 350px;
   display: flex;
@@ -162,12 +146,15 @@ const Slider = styled.div`
   left: 0;
   transform: translateX(${(props) => -props.currentSlider * 100}vw);
   transition: all 1s ease-out;
-  @media (max-width: 896px) {
-    height: 73%;
+
+  @media (max-width: 768px) {
+    height: 800px;
+    justify-content: center;
     flex-direction: column;
   }
+
   @media (max-width: 500px) {
-    height: 70%;
+    height: 1200px;
   }
 `;
 
@@ -176,35 +163,34 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 896px) {
-    margin-bottom: 50px;
-    padding-right: 200px;
-  }
-
-  @media (max-width: 895px) {
-    width: 90%;
-    margin-bottom: 80px;
-    padding-right: 50px;
-  }
-
-  @media (max-width: 812px) {
-    width: 80%;
-    margin-bottom: 100px;
-    padding-right: 20px;
-  }
-
-  @media (max-width: 762px) {
-    width: 70%;
-    margin-bottom: 120px;
-  }
-
-  @media (max-width: 600px) {
-    width: 100vw;
-    margin-bottom: 180px;
+  /* background-color: white;
+  border: 8px solid #b22222; */
+  @media (max-width: 768px) {
+    height: 50%;
+    width: 95vw;
+    padding-bottom: 400px;
   }
 
   @media (max-width: 500px) {
-    margin-bottom: 50px;
+    padding-bottom: 150px;
+    height: 80%;
+  }
+
+  @media (max-width: 420px) {
+    padding-bottom: 300px;
+    height: 60%;
+  }
+
+  @media (max-width: 412px) {
+    padding-bottom: 350px;
+  }
+
+  @media (max-width: 376px) {
+    padding-bottom: 830px;
+  }
+
+  @media (max-width: 321px) {
+    padding-bottom: 1100px;
   }
 `;
 
@@ -216,16 +202,15 @@ const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 897px) {
-    width: 90%;
-    height: 217px;
-    margin: 5px 0;
-    margin-bottom: 180px;
+
+  @media (max-width: 768px) {
+    height: 200px;
+    /* margin: 15px 0; */
+    margin-top: 50%;
   }
+
   @media (max-width: 500px) {
-    width: 95%;
-    height: 250px;
-    margin-bottom: 400px;
+    margin-top: 50%;
   }
 `;
 const Left = styled.div`
@@ -238,8 +223,19 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 897px) {
+
+  @media (max-width: 768px) {
     flex: 3;
+  }
+
+  @media (max-width: 500px) {
+    flex: 4;
+    height: 240px;
+  }
+
+  @media (max-width: 320px) {
+    flex: 5;
+    /* height: 320px; */
   }
 `;
 
@@ -252,14 +248,15 @@ const Right = styled.div`
   ul > li {
     margin-top: -3px;
   }
-  @media (max-width: 897px) {
-    height: 70%;
-  }
 `;
 
 const RightContainer = styled.div`
   flex: 8;
   justify-content: space-around;
+
+  @media (max-width: 768px) {
+    flex: 9;
+  }
 `;
 
 const LeftContainer = styled.div`

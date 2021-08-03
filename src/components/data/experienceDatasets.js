@@ -8,36 +8,30 @@ const experienceDatasets = [
     achievements: [
       {
         id: 1,
+        item: "Developed a full stack Amazon e-Commerce clone allowing users to sign to view and purchase items",
+      },
+      {
+        id: 2,
         item: "Designed a Netflix-style web app which pulls movie posters and trailers from an API displayed back to users.",
       },
 
       {
-        id: 2,
+        id: 3,
         item: "Successfully generated a Tesla front page built in React and deployed Firebase which snaps to section on scroll.",
       },
 
       {
-        id: 3,
-        item: "Created Leaf Note, a MERN style web app built in React which takes notes and saves them to an Atlas cluster.",
+        id: 4,
+        item: "Leaf Note: a web app built in React allowing users to create notes and save them to an Atlas cluster.",
       },
 
-      {
-        id: 4,
-        item: "Developed an Authentication app (Whisper Mockup) allowing users to anonymously sign in and submit secrets.",
-      },
       {
         id: 5,
-        item: "Launched an advertisement for the dog dating app Fetchbone.",
+        item: "Secrets: an app allowing users to authenticate with Google or Facebook and submit their secrets anonymously.",
       },
-
       {
         id: 6,
-        item: "Produced Quizzler, a True or False trivia app built in PyCharm, that gets questions from the opentdb.com API.",
-      },
-
-      {
-        id: 7,
-        item: "Developed an International Space Station (ISS) tracker on Python Anywhere which updates every 60 seconds and sends an email to a user if ISS is above the user’s specified latitude and longitude location at night.",
+        item: "Launched an advertisement for the dog dating app Fetchbone.",
       },
     ],
   },
