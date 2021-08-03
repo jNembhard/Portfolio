@@ -66,28 +66,30 @@ function Resume() {
 export default Resume;
 
 const SliderWrap = styled.div`
-  height: 1000px;
+  height: 600px;
   margin-bottom: 150px;
+  background-color: crimson;
+  border-color: transparent;
 
   @media (max-width: 768px) {
-    height: 1800px;
+    height: 1400px;
   }
 
   @media (max-width: 500px) {
-    height: 2650px;
+    height: 2350px;
   }
 
   @media (max-width: 376px) {
-    height: 3200px;
+    height: 2800px;
   }
 
   @media (max-width: 321px) {
-    height: 4300px;
+    height: 3600px;
   }
 `;
 
 const SliderContainer = styled.div`
-  background-color: crimson;
+  /* background-color: crimson; */
   height: 500px;
   display: flex;
   position: absolute;
@@ -137,6 +139,7 @@ const ResumeHeading = styled.h2`
   font-size: 60px;
   display: flex;
   justify-content: center;
+  background-color: white;
 `;
 
 const Slider = styled.div`
