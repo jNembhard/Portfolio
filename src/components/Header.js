@@ -34,7 +34,7 @@ function Header(props) {
               </HeaderOption>
             ))}
             <HeaderBtnWrap>
-              <MDBBtns outline color="info">
+              <MDBBtns outline color="primary">
                 Resume
                 <MDBIconS fas icon="download" />
               </MDBBtns>
@@ -62,7 +62,7 @@ function Header(props) {
                 </ul>
               ))}
               <BtnNav>
-                <MDBBtns outline color="info">
+                <MDBBtns outline color="primary">
                   Resume
                   <MDBIconS fas icon="download" />
                 </MDBBtns>

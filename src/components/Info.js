@@ -57,6 +57,7 @@ const Left = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
   @media (max-width: 768px) {
     padding-top: 100px;
   }
@@ -99,8 +100,7 @@ const ImageContainer = styled.div`
 `;
 
 const Title = styled.div`
-  width: 100%;
-  height: 100%;
+  height: 56.25%;
   padding-left: 10px;
   display: flex;
   flex-direction: column;
@@ -108,6 +108,10 @@ const Title = styled.div`
   position: absolute;
   left: 400px;
   color: #111;
+
+  @media (min-width: 1270px) and (max-width: 1280px) {
+    top: 36.25%;
+  }
 
   > h1 {
     font-size: 72px;
@@ -162,7 +166,11 @@ const Title = styled.div`
 const PortfolioAnchor = styled.div`
   position: absolute;
   left: 70%;
-  top: 85%;
+  top: 56.25%;
+
+  @media (max-width: 1280px) {
+    top: 85.25%;
+  }
 
   @media only screen and (max-width: 896px) and (orientation: landscape) {
     left: 87%;
@@ -175,7 +183,7 @@ const PortfolioAnchor = styled.div`
 
   @media (max-width: 768px) {
     left: 45%;
-    top: 90%;
+    top: 55%;
   }
 
   @media (max-width: 414px) {

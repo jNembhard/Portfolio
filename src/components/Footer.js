@@ -15,8 +15,9 @@ function Footer() {
               className="m-1"
               style={{ color: "#0082ca" }}
               href="https://www.linkedin.com/in/jasonnembhard1/"
+              aria-label="linkedin"
             >
-              <MDBIcon fab icon="linkedin-in" size="2x" />
+              <MDBIcon fab icon="linkedin-in" size="2x" alt="LinkedIn" />
             </MDBBtnOne>
           </BtnWrapOne>
           <MDBBtnTwo
@@ -25,8 +26,9 @@ function Footer() {
             className="m-1"
             style={{ color: "#EEEADE" }}
             href="https://github.com/jNembhard"
+            aria-label="github"
           >
-            <MDBIcon fab icon="github" size="2x" />
+            <MDBIcon fab icon="github" size="2x" alt="GitHub" />
           </MDBBtnTwo>
         </Middle>
         <End>Copyright © {date} Jason Nembhard</End>
