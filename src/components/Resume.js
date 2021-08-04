@@ -89,7 +89,6 @@ const SliderWrap = styled.div`
 `;
 
 const SliderContainer = styled.div`
-  /* background-color: crimson; */
   height: 500px;
   display: flex;
   position: absolute;

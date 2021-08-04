@@ -109,7 +109,7 @@ function Contact(props) {
                 onClose={handleClose}
               >
                 <Alert onClose={handleClose} severity="success">
-                  This is a success message!
+                  Your message has been sent successfully!
                 </Alert>
               </Snackbar>
             </div>

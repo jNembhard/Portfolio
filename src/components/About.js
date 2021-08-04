@@ -133,7 +133,6 @@ const DescriptionContainer = styled.div`
     width: 450px;
     height: 500px;
     margin-left: 0;
-
     border-bottom-left-radius: 0px 0px;
     border-bottom-right-radius: 0px 0px;
   }

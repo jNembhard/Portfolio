@@ -55,9 +55,9 @@ function Portfolio() {
           </Row>
         </MDBCollapse>
         <CollapseContainer>
-          <MDBBtn outline color="dark" onClick={toggleShow}>
+          <MDBBtns outline color="dark" onClick={toggleShow}>
             Show {showContent ? "Less" : "More"}
-          </MDBBtn>
+          </MDBBtns>
         </CollapseContainer>
       </RowWrap>
     </PortfolioWrapper>
@@ -111,4 +111,11 @@ const CollapseContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+const MDBBtns = styled(MDBBtn)`
+  &:hover {
+    color: gold;
+    background-color: #262626;
+  }
 `;

@@ -24,7 +24,12 @@ function Header(props) {
   return (
     <div ref={wrapperRef}>
       <Container>
-        <h1>jason.</h1>
+        <HeaderBtnWrap>
+          <MDBBtnLeft outline color="primary">
+            Resume
+            <MDBIconLeft fas icon="download" />
+          </MDBBtnLeft>
+        </HeaderBtnWrap>
 
         <div>
           <HeaderNav>
@@ -43,7 +48,7 @@ function Header(props) {
 
           <RightMenu>
             <CustomBurger
-              hideOutline={false}
+              hideOutline={true}
               toggled={modalOpen}
               toggle={setModalOpen}
               onToggle={(toggled) => (toggled ? blockScroll() : allowScroll())}
@@ -124,12 +129,24 @@ const HeaderBtnWrap = styled(HeaderOption)`
 
 const MDBBtns = styled(MDBBtn)`
   &:hover {
-    color: yellow;
+    color: gold;
+    background-color: #1266f1;
+  }
+`;
+
+const MDBBtnLeft = styled(MDBBtns)`
+  display: none;
+  @media (max-width: 768px) {
+    display: inherit;
   }
 `;
 
 const MDBIconS = styled(MDBIcon)`
   padding-left: 5px;
+`;
+
+const MDBIconLeft = styled(MDBIconS)`
+  padding-top: 2px;
 `;
 
 const AnchorLine = styled.a`
@@ -138,7 +155,7 @@ const AnchorLine = styled.a`
   color: inherit;
 
   &:hover {
-    color: yellow;
+    color: gold;
   }
 `;
 
@@ -180,7 +197,7 @@ const BurgerNav = styled.div`
         color: inherit;
 
         &:hover {
-          color: yellow;
+          color: gold;
         }
       }
     }
@@ -191,7 +208,7 @@ const RightMenu = styled.div`
   display: none;
 
   @media (max-width: 768px) {
-    display: flex;
+    display: inherit;
     justify-content: flex-end;
     z-index: 102;
     position: absolute;
