@@ -237,7 +237,6 @@ const Left = styled.div`
 
   @media (max-width: 320px) {
     flex: 5;
-    /* height: 320px; */
   }
 `;
 
@@ -267,17 +266,21 @@ const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
   > h2 {
     font-size: 18px;
+    color: #2a2a2a;
   }
   > p {
     font-size: 12.5px;
     font-weight: 600;
+    color: #2a2a2a;
   }
   > span {
     font-size: 12px;
     font-weight: 500;
     margin-top: 0;
+    color: #2a2a2a;
   }
 `;
 

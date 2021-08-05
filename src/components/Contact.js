@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-// import emailjs from "emailjs-com";
+import emailjs from "emailjs-com";
 import MuiAlert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
@@ -23,11 +23,11 @@ function Contact(props) {
     setState({ open: true, ...newState });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setMessage(true);
-    event.target.reset();
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   setMessage(true);
+  //   event.target.reset();
+  // };
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -37,38 +37,34 @@ function Contact(props) {
     setState({ ...state, open: false });
   };
 
-  // const sendEmail = (event) => {
-  //   event.preventDefault();
-  //   setMessage(true);
+  const sendEmail = (event) => {
+    event.preventDefault();
+    setMessage(true);
 
-  //   emailjs
-  //     .sendForm(
-  //       `${process.env.REACT_APP_YOUR_SERVICE_ID}`,
-  //       `${process.env.REACT_APP_YOUR_TEMPLATE_ID}`,
-  //       event.target,
-  //       `${process.env.REACT_APP_YOUR_USER_ID}`
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  //   event.target.reset();
-  // };
+    emailjs
+      .sendForm(
+        `${process.env.REACT_APP_YOUR_SERVICE_ID}`,
+        `${process.env.REACT_APP_YOUR_TEMPLATE_ID}`,
+        event.target,
+        `${process.env.REACT_APP_YOUR_USER_ID}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    event.target.reset();
+  };
 
   return (
     <div id="contact">
       <ContactContainer>
         <Left>
           <ContactHeading>Contact Me</ContactHeading>
-          <form
-            action="https://formsubmit.co/"
-            method="POST"
-            onSubmit={handleSubmit}
-          >
+          <form method="POST" onSubmit={sendEmail}>
             <input
               name="from_name"
               type="text"

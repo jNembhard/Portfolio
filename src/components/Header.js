@@ -4,6 +4,7 @@ import { Spin as Hamburger } from "hamburger-react";
 import useScrollBlock from "./hooks/useScrollBlock";
 import { useOnClickOutside } from "./hooks/useOnClickOutside";
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+import fileSaver from "file-saver";
 
 function Header(props) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -21,11 +22,18 @@ function Header(props) {
     { id: 4, option: "Contact ", section: "#contact" },
   ];
 
+  const saveFile = () => {
+    fileSaver.saveAs(
+      process.env.PUBLIC_URL + "/resume/Jason_Nembhard_Resume.pdf",
+      "Jason Nembhard Resume.pdf"
+    );
+  };
+
   return (
     <div ref={wrapperRef}>
       <Container>
         <HeaderBtnWrap>
-          <MDBBtnLeft outline color="primary">
+          <MDBBtnLeft outline color="primary" onClick={saveFile}>
             Resume
             <MDBIconLeft fas icon="download" />
           </MDBBtnLeft>
@@ -39,7 +47,7 @@ function Header(props) {
               </HeaderOption>
             ))}
             <HeaderBtnWrap>
-              <MDBBtns outline color="primary">
+              <MDBBtns outline color="primary" onClick={saveFile}>
                 Resume
                 <MDBIconS fas icon="download" />
               </MDBBtns>
@@ -67,7 +75,7 @@ function Header(props) {
                 </ul>
               ))}
               <BtnNav>
-                <MDBBtns outline color="primary">
+                <MDBBtns outline color="primary" onClick={saveFile}>
                   Resume
                   <MDBIconS fas icon="download" />
                 </MDBBtns>
