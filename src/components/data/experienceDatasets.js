@@ -39,7 +39,7 @@ const experienceDatasets = [
     id: 2,
     icon: "lightbulb",
     title: "AlNembCo Services LLC",
-    subtitle: "Electrician Associate",
+    subtitle: "Electrician Assistant",
     date: "June 2012 - Present",
     achievements: [
       {
