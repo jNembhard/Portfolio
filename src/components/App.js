@@ -5,31 +5,20 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Footer from "./Footer";
-import Resume from "./Resume";
-import styled from "styled-components";
+import ResumeSlider from "./ResumeSlider";
 
 function App() {
   return (
-    <AppWrap>
-      <div className="boundary">
-        <Header />
-        <Info />
-        <About />
-        <Resume />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </div>
-    </AppWrap>
+    <div>
+      <Header />
+      <Info />
+      <About />
+      <Portfolio />
+      <ResumeSlider />
+      <Contact />
+      <Footer />
+    </div>
   );
 }
 
 export default App;
-
-const AppWrap = styled.div`
-  @media only screen and (max-width: 896px) and (orientation: landscape) {
-    & .boundary {
-      padding-left: 100px;
-    }
-  }
-`;

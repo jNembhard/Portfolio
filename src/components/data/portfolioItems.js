@@ -1,12 +1,13 @@
 const portfolioItems = [
   {
     id: 1,
-    image: process.env.PUBLIC_URL + "images/portfolio_images/amazon_web.jpeg",
-    alt: "Amazon",
-    title: "Amazon e-Commerce Clone",
-    description: "An ecommerce app",
-    website: "https://amznjason.web.app/",
-    source: "https://github.com/jNembhard/amzn-ecommerce",
+    image:
+      process.env.PUBLIC_URL + "images/portfolio_images/pod_access_web.jpeg",
+    alt: "Pod Access",
+    title: "Pod Access Request",
+    description: "Landing page built with BEM, HTML5, and Sass",
+    website: "https://podaccess-jason.netlify.app/",
+    source: "https://github.com/jNembhard/pod-request-access",
   },
   {
     id: 2,
@@ -20,6 +21,15 @@ const portfolioItems = [
   },
   {
     id: 3,
+    image: process.env.PUBLIC_URL + "images/portfolio_images/amazon_web.jpeg",
+    alt: "Amazon",
+    title: "Amazon e-Commerce Clone",
+    description: "An ecommerce app",
+    website: "https://amznjason.web.app/",
+    source: "https://github.com/jNembhard/amzn-ecommerce",
+  },
+  {
+    id: 4,
     image:
       process.env.PUBLIC_URL + "images/portfolio_images/jasons_tesla_web.jpeg",
     alt: "Tesla",
@@ -27,18 +37,6 @@ const portfolioItems = [
     description: "A mockup landing page inspired by Tesla.",
     website: "https://jasons-tesla.web.app/",
     source: "https://github.com/jNembhard/tesla-design",
-  },
-  {
-    id: 4,
-    image:
-      process.env.PUBLIC_URL + "images/portfolio_images/leaf_note_web.jpeg",
-    alt: "Leaf Note App",
-    title: "Leaf Note",
-    description:
-      "A MERN style app that allows users to write notes which are saved to an Atlas cluster.",
-
-    website: "https://leaf-note.herokuapp.com/",
-    source: "https://github.com/jNembhard/leafnote",
   },
   {
     id: 5,
@@ -64,15 +62,6 @@ const portfolioItems = [
   },
   {
     id: 7,
-    image: process.env.PUBLIC_URL + "images/portfolio_images/quizzler_web.jpeg",
-    alt: "Quizzler App",
-    title: "Quizzler",
-    description: "A GUI Trivia app built with Python.",
-    website: "",
-    source: "https://github.com/jNembhard/Quizzler",
-  },
-  {
-    id: 8,
     image:
       process.env.PUBLIC_URL + "images/portfolio_images/iss_tracker_web.jpeg",
     alt: "ISS Tracker App",

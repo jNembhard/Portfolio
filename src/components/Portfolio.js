@@ -27,8 +27,8 @@ function Portfolio() {
         </Row>
 
         <MDBCollapse show={showContent}>
-          <Row>
-            {portfolioItems.slice(3, 6).map((portfolioItem) => (
+          <Row2>
+            {portfolioItems.slice(3, 7).map((portfolioItem) => (
               <Card
                 key={portfolioItem.id}
                 image={portfolioItem.image}
@@ -39,20 +39,7 @@ function Portfolio() {
                 source={portfolioItem.source}
               />
             ))}
-          </Row>
-          <Row>
-            {portfolioItems.slice(-2).map((portfolioItem) => (
-              <Card
-                key={portfolioItem.id}
-                image={portfolioItem.image}
-                title={portfolioItem.title}
-                alt={portfolioItem.alt}
-                description={portfolioItem.description}
-                website={portfolioItem.website}
-                source={portfolioItem.source}
-              />
-            ))}
-          </Row>
+          </Row2>
         </MDBCollapse>
         <CollapseContainer>
           <MDBBtns outline color="dark" onClick={toggleShow}>
@@ -105,6 +92,11 @@ const Row = styled.div`
     flex-direction: column;
     align-items: center;
   }
+`;
+
+const Row2 = styled(Row)`
+  margin-left: 0;
+  margin-right: 0;
 `;
 
 const CollapseContainer = styled.div`
