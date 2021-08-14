@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { init } from "ityped";
-import { MDBIcon } from "mdb-react-ui-kit";
+import Zoom from "react-reveal/Zoom";
 
 function Info() {
   const textRef = useRef();
@@ -17,20 +17,38 @@ function Info() {
 
   return (
     <IntroWrapper>
-      <Left>
-        <ImageContainer>
-          <Title>
-            <h6>Hello I'm</h6>
-            <h1>Jason Nembhard.</h1>
-            <h2>
-              A <span ref={textRef}></span>
-            </h2>
-          </Title>
-        </ImageContainer>
-      </Left>
-      <PortfolioAnchor>
-        <ChevronArrow color="black" size="3x" fas icon="chevron-down" />
-      </PortfolioAnchor>
+      <div class="content">
+        <Zoom cascade delay={1500}>
+          <h3>Hello I'm </h3>
+          <h1>Jason Nembhard</h1>
+        </Zoom>
+
+        <h2>
+          A <span ref={textRef}></span>
+        </h2>
+      </div>
+      <Zoom delay={500}>
+        <picture>
+          <source
+            media="(max-width:576px)"
+            srcset={
+              process.env.PUBLIC_URL + "images/info_page/sm_computer_2.jpg"
+            }
+          />
+          <source
+            media="(max-width:768px)"
+            srcset={process.env.PUBLIC_URL + "images/info_page/md_computer.jpg"}
+          />
+          <source
+            media="(max-width:1440px)"
+            srcset={process.env.PUBLIC_URL + "images/info_page/lg_computer.jpg"}
+          />
+          <img
+            src={process.env.PUBLIC_URL + "images/info_page/lg_computer.jpg"}
+            alt="By Fotis Photopoulos on Unsplash"
+          />
+        </picture>
+      </Zoom>
     </IntroWrapper>
   );
 }
@@ -38,210 +56,103 @@ function Info() {
 export default Info;
 
 const IntroWrapper = styled.div`
-  background-color: white;
   display: flex;
-  padding-bottom: 120px;
-
-  @media (max-width: 768px) {
-    align-items: center;
-    padding-bottom: 280px;
-  }
-
-  @media (max-width: 414px) and (orientation: portrait) {
-    padding-bottom: 500px;
-  }
-`;
-
-const Left = styled.div`
-  display: flex;
+  padding-bottom: 150px;
+  width: 100%;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  margin-bottom: 200px;
 
-  @media (max-width: 768px) {
-    padding-top: 100px;
-  }
-  @media (max-width: 414px) {
-    padding-top: 100px;
-  }
-`;
+  > picture {
+    position: absolute;
+    filter: brightness(30%);
 
-const ImageContainer = styled.div`
-  width: 600px;
-  height: 600px;
-  background-color: crimson;
-  border-radius: 50%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  float: right;
-  padding-top: 200px;
+    > source {
+      z-index: -2;
+      display: block;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
 
-  @media only screen and (max-width: 896px) and (orientation: landscape) {
-    width: 500px;
-    height: 500px;
-  }
-  @media (max-width: 768px) {
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 80px;
-    width: 350px;
-    height: 350px;
-  }
+    > img {
+      z-index: -2;
+      display: block;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
 
-  @media (max-width: 500px) {
-    width: 300px;
-    height: 300px;
-  }
+    @media (max-width: 768px) {
+      position: relative;
+      overflow-x: hidden;
+    }
 
-  @media (max-width: 414px) and (orientation: portrait) {
-    padding-top: 150px;
-  }
-`;
-
-const Title = styled.div`
-  height: 56.25%;
-  padding-left: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  left: 400px;
-  color: #111;
-
-  @media (min-width: 1270px) and (max-width: 1280px) {
-    top: 36.25%;
-  }
-
-  > h1 {
-    font-size: 72px;
-  }
-
-  > h2 {
-    font-size: 38px;
-  }
-
-  > h2 > span {
-    font-size: inherit;
-    font-size: 37px;
-  }
-
-  > h6 {
-    font-size: 22px;
-  }
-
-  @media (max-width: 768px) {
-    align-items: left;
-    padding-left: 80px;
-    padding-bottom: 400px;
-    left: 5px;
-    > h1 {
-      font-size: 50px;
+    @media (max-width: 576px) {
+      overflow: auto;
+      margin-bottom: 220px;
+      > picture {
+        > source {
+          overflow-x: hidden;
+          object-fit: contain;
+          width: auto;
+          height: auto;
+        }
+        > img {
+          object-fit: contain;
+          width: auto;
+          height: auto;
+        }
+      }
     }
   }
 
-  @media (min-width: 601px) and (max-width: 766px) {
-    top: 56.25%;
-  }
+  .content {
+    position: absolute;
+    z-index: 3;
+    flex-direction: column;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    color: #ffffff;
 
-  @media (max-width: 600px) {
-    top: 54.25%;
-  }
-  @media (max-width: 500px) {
-    top: 36.25%;
-    padding-left: 55px;
     > h1 {
-      font-size: 40px;
+      font-size: 80px;
     }
 
     > h2 {
-      font-size: 27px;
+      font-size: 50px;
       > span {
-        font-size: 27px;
+        color: crimson;
       }
     }
 
-    > h6 {
-      font-size: 16px;
+    > h3 {
+      color: transparent;
+      font-size: 40px;
+      -webkit-text-stroke: 2px #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      text-align: left;
+
+      > h1 {
+        font-size: 50px;
+      }
+
+      > h2 {
+        font-size: 45px;
+      }
+    }
+
+    @media (max-width: 375px) {
+      > h1 {
+        font-size: 48px;
+      }
+      > h2 {
+        font-size: 43px;
+      }
     }
   }
-
-  @media (max-width: 414px) {
-    top: 42.25%;
-    padding-bottom: 730px;
-  }
-
-  @media (max-width: 376px) {
-    top: 40.25%;
-  }
-
-  @media (max-width: 361px) {
-    top: 45%;
-  }
-  @media (max-width: 320px) {
-    top: 56%;
-    padding-left: 50px;
-  }
-`;
-
-const PortfolioAnchor = styled.div`
-  position: absolute;
-  left: 70%;
-  top: 56.25%;
-
-  @media (max-width: 1285px) {
-    top: 85.25%;
-  }
-
-  @media only screen and (max-width: 896px) and (orientation: landscape) {
-    left: 87%;
-    top: 140%;
-  }
-
-  @media (width: 736px) and (height: 414px) {
-    display: none;
-  }
-
-  @media (max-width: 768px) {
-    left: 45%;
-    top: 55%;
-  }
-
-  @media (min-width: 601px) and (max-width: 766px) {
-    left: 80%;
-    top: 75%;
-  }
-
-  @media (max-width: 600px) {
-    top: 90%;
-    left: 46.25%;
-  }
-
-  @media (max-width: 414px) {
-    top: 80%;
-  }
-`;
-
-const ChevronArrow = styled(MDBIcon)`
-  overflow-x: hidden;
-  overflow-y: hidden;
-  @media (max-width: 376px) {
-    display: none;
-  }
-  @keyframes animateDown {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(5px);
-    }
-    60% {
-      transform: translateY(3px);
-    }
-  }
-  animation: animateDown 1.5s infinite;
 `;

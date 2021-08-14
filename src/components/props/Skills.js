@@ -1,25 +1,28 @@
 import React from "react";
 import { MDBCard, MDBCardBody, MDBIcon, MDBCardTitle } from "mdb-react-ui-kit";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 export default function Skills(props) {
   return (
     <MDBCardS>
-      <MDBCardBodyS>
-        {props.image ? (
-          <Image src={props.image} alt="icon images" />
-        ) : (
-          <MDBIcon
-            fab
-            icon={props.icon}
-            size="3x"
-            style={{ color: props.color }}
-          />
-        )}
-        <TitleWrap>
-          <MDBCardTitle className="font-size">{props.main}</MDBCardTitle>
-        </TitleWrap>
-      </MDBCardBodyS>
+      <Fade bottom delay={1250}>
+        <MDBCardBodyS>
+          {props.image ? (
+            <Image src={props.image} alt="icon images" />
+          ) : (
+            <MDBIcon
+              fab
+              icon={props.icon}
+              size="3x"
+              style={{ color: props.color }}
+            />
+          )}
+          <TitleWrap>
+            <MDBCardTitle className="font-size">{props.main}</MDBCardTitle>
+          </TitleWrap>
+        </MDBCardBodyS>
+      </Fade>
     </MDBCardS>
   );
 }
@@ -46,6 +49,12 @@ const TitleWrap = styled.div`
       font-size: 18px;
     }
   }
+
+  @media (max-width: 375px) {
+    & .font-size {
+      font-size: 14px;
+    }
+  }
 `;
 
 const Image = styled.img`
@@ -65,5 +74,10 @@ const MDBCardS = styled(MDBCard)`
   @media (max-width: 414px) {
     margin-right: 1px;
     left: -3.5px;
+  }
+
+  @media (max-width: 375px) {
+    width: 150px;
+    /* left: 0; */
   }
 `;

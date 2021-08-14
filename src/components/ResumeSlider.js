@@ -5,7 +5,7 @@ import styled from "styled-components";
 function ResumeSlider() {
   return (
     <div>
-      <ResumeHeading>Experience</ResumeHeading>
+      <ResumeHeading id="experience">Experience</ResumeHeading>
       <Carousel>
         <Items>
           <Display>
@@ -139,7 +139,7 @@ function ResumeSlider() {
 export default ResumeSlider;
 
 const Display = styled.div`
-  background-color: sandybrown;
+  background-color: #f59b42;
   width: 200px;
   height: 200px;
   z-index: 1;
@@ -226,8 +226,8 @@ const Display = styled.div`
 `;
 
 const Info = styled.div`
-  background-color: SkyBlue;
-  color: #2a2a2a;
+  background-color: #007fff;
+  color: #2b2a2a;
   white-space: pre-wrap;
   word-break: break-word;
   width: 800px;

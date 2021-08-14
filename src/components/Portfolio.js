@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Card from "./props/Card";
 import portfolioItems from "./data/portfolioItems";
 import { MDBBtn, MDBCollapse } from "mdb-react-ui-kit";
+import Fade from "react-reveal/Fade";
 
 function Portfolio() {
   const [showContent, setShowContent] = useState(false);
@@ -10,25 +11,13 @@ function Portfolio() {
 
   return (
     <PortfolioWrapper id="portfolio">
-      <PortfolioHeading>Portfolio</PortfolioHeading>
+      <Fade>
+        <PortfolioHeading>Portfolio</PortfolioHeading>
+      </Fade>
       <RowWrap>
         <Row>
           {portfolioItems.slice(0, 3).map((portfolioItem) => (
-            <Card
-              key={portfolioItem.id}
-              image={portfolioItem.image}
-              title={portfolioItem.title}
-              alt={portfolioItem.alt}
-              description={portfolioItem.description}
-              website={portfolioItem.website}
-              source={portfolioItem.source}
-            />
-          ))}
-        </Row>
-
-        <MDBCollapse show={showContent}>
-          <Row2>
-            {portfolioItems.slice(3, 7).map((portfolioItem) => (
+            <Fade bottom>
               <Card
                 key={portfolioItem.id}
                 image={portfolioItem.image}
@@ -38,6 +27,24 @@ function Portfolio() {
                 website={portfolioItem.website}
                 source={portfolioItem.source}
               />
+            </Fade>
+          ))}
+        </Row>
+
+        <MDBCollapse show={showContent}>
+          <Row2>
+            {portfolioItems.slice(3, 7).map((portfolioItem) => (
+              <Fade bottom>
+                <Card
+                  key={portfolioItem.id}
+                  image={portfolioItem.image}
+                  title={portfolioItem.title}
+                  alt={portfolioItem.alt}
+                  description={portfolioItem.description}
+                  website={portfolioItem.website}
+                  source={portfolioItem.source}
+                />
+              </Fade>
             ))}
           </Row2>
         </MDBCollapse>

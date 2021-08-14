@@ -51,4 +51,9 @@ const MDBIconS = styled(MDBIcon)`
 
 const MDBCardS = styled(MDBCard)`
   margin-bottom: 25px;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.08);
+  }
 `;

@@ -5,6 +5,8 @@ import useScrollBlock from "./hooks/useScrollBlock";
 import { useOnClickOutside } from "./hooks/useOnClickOutside";
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 import fileSaver from "file-saver";
+import Flip from "react-reveal/Flip";
+import Fade from "react-reveal/Fade";
 
 function Header(props) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -33,34 +35,47 @@ function Header(props) {
     <div ref={wrapperRef}>
       <Container>
         <HeaderBtnWrap>
-          <MDBBtnLeft outline color="primary" onClick={saveFile}>
-            Resume
-            <MDBIconLeft fas icon="download" />
-          </MDBBtnLeft>
+          <Fade bottom delay={1800}>
+            <MDBBtnLeft outline color="primary" onClick={saveFile}>
+              Resume
+              <MDBIconLeft fas icon="download" />
+            </MDBBtnLeft>
+          </Fade>
         </HeaderBtnWrap>
 
         <div>
           <HeaderNav>
             {sides.map((side) => (
               <HeaderOption key={side.id}>
-                <AnchorLine href={side.section}>{side.option}</AnchorLine>
+                <AnchorLine href={side.section}>
+                  <Flip left cascade delay={1800}>
+                    {side.option}
+                  </Flip>
+                </AnchorLine>
               </HeaderOption>
             ))}
+
             <HeaderBtnWrap>
-              <MDBBtns outline color="primary" onClick={saveFile}>
-                Resume
-                <MDBIconS fas icon="download" />
-              </MDBBtns>
+              <Fade bottom delay={1800}>
+                <MDBBtns outline color="primary" onClick={saveFile}>
+                  Resume
+                  <MDBIconS fas icon="download" />
+                </MDBBtns>
+              </Fade>
             </HeaderBtnWrap>
           </HeaderNav>
 
           <RightMenu>
-            <CustomBurger
-              hideOutline={true}
-              toggled={modalOpen}
-              toggle={setModalOpen}
-              onToggle={(toggled) => (toggled ? blockScroll() : allowScroll())}
-            />
+            <Fade bottom delay={1800}>
+              <CustomBurger
+                hideOutline={true}
+                toggled={modalOpen}
+                toggle={setModalOpen}
+                onToggle={(toggled) =>
+                  toggled ? blockScroll() : allowScroll()
+                }
+              />
+            </Fade>
           </RightMenu>
 
           <BurgerNav modalOpen={modalOpen}>
@@ -91,13 +106,16 @@ function Header(props) {
 export default Header;
 
 const Container = styled.div`
+  position: absolute;
+  z-index: 5;
   height: 60px;
   display: flex;
   justify-content: space-between;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  background-color: transparent;
+  color: #ffffff;
 
   > h1 {
     margin-left: 20px;
@@ -110,6 +128,7 @@ const Container = styled.div`
 `;
 
 const HeaderNav = styled.div`
+  z-index: 5;
   display: flex;
 
   @media (max-width: 768px) {
@@ -176,7 +195,7 @@ const BurgerNav = styled.div`
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: white;
+    background-color: #403f4c;
     width: 300px;
     z-index: 100;
     padding: 20px;
