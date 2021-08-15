@@ -68,7 +68,7 @@ function Contact(props) {
             <ContactHeading>Contact Me</ContactHeading>
           </Fade>
           <form method="POST" onSubmit={sendEmail}>
-            <Fade right delay={1100}>
+            <Fade right>
               <input
                 name="from_name"
                 type="text"
@@ -76,7 +76,7 @@ function Contact(props) {
                 required
               />
             </Fade>
-            <Fade left delay={1150}>
+            <Fade left>
               <input
                 name="from_email"
                 type="email"
@@ -84,7 +84,7 @@ function Contact(props) {
                 required
               />
             </Fade>
-            <Fade right delay={1200}>
+            <Fade right>
               <input
                 name="subject"
                 type="text"
@@ -92,7 +92,7 @@ function Contact(props) {
                 required
               />
             </Fade>
-            <Fade left delay={1250}>
+            <Fade left>
               <textarea
                 name="message"
                 placeholder="Write a message..."
@@ -125,13 +125,13 @@ function Contact(props) {
           </form>
         </Left>
         <Right>
-          <Fade bottom delay={1300}>
+          <Fade bottom>
             <ContactInfo>
               <h2>Phone Number:</h2>
               +1 (703) 297-0357
             </ContactInfo>
           </Fade>
-          <Fade bottom delay={1350}>
+          <Fade bottom>
             <ContactInfo>
               <h2>E-mail Address:</h2>
               nembhardjl@outlook.com

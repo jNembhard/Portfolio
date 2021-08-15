@@ -5,25 +5,27 @@ import Fade from "react-reveal/Fade";
 
 export default function Skills(props) {
   return (
-    <MDBCardS>
-      <Fade bottom delay={1250}>
-        <MDBCardBodyS>
-          {props.image ? (
-            <Image src={props.image} alt="icon images" />
-          ) : (
-            <MDBIcon
-              fab
-              icon={props.icon}
-              size="3x"
-              style={{ color: props.color }}
-            />
-          )}
-          <TitleWrap>
-            <MDBCardTitle className="font-size">{props.main}</MDBCardTitle>
-          </TitleWrap>
-        </MDBCardBodyS>
-      </Fade>
-    </MDBCardS>
+    <Fade right delay={1020}>
+      <MDBCardS>
+        <Fade bottom delay={1050}>
+          <MDBCardBodyS>
+            {props.image ? (
+              <Image src={props.image} alt="icon images" />
+            ) : (
+              <MDBIcon
+                fab
+                icon={props.icon}
+                size="3x"
+                style={{ color: props.color }}
+              />
+            )}
+            <TitleWrap>
+              <MDBCardTitle className="font-size">{props.main}</MDBCardTitle>
+            </TitleWrap>
+          </MDBCardBodyS>
+        </Fade>
+      </MDBCardS>
+    </Fade>
   );
 }
 

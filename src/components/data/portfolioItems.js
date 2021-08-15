@@ -2,7 +2,7 @@ const portfolioItems = [
   {
     id: 1,
     image:
-      process.env.PUBLIC_URL + "images/portfolio_images/pod_access_web.jpeg",
+      process.env.PUBLIC_URL + "images/portfolio_images/pod_access-small.jpg",
     alt: "Pod Access",
     title: "Pod Access Request",
     description: "Landing page built with BEM, HTML5, and Sass",
@@ -12,7 +12,7 @@ const portfolioItems = [
   {
     id: 2,
     image:
-      process.env.PUBLIC_URL + "images/portfolio_images/jasonflix_web.jpeg",
+      process.env.PUBLIC_URL + "images/portfolio_images/jasonflix-small.jpg",
     alt: "Netflix",
     title: "Netflix Clone",
     description: "Scroll through movies and watch available trailers.",
@@ -21,7 +21,7 @@ const portfolioItems = [
   },
   {
     id: 3,
-    image: process.env.PUBLIC_URL + "images/portfolio_images/amazon_web.jpeg",
+    image: process.env.PUBLIC_URL + "images/portfolio_images/amazon-small.jpg",
     alt: "Amazon",
     title: "Amazon e-Commerce Clone",
     description: "An ecommerce app",
@@ -31,7 +31,7 @@ const portfolioItems = [
   {
     id: 4,
     image:
-      process.env.PUBLIC_URL + "images/portfolio_images/jasons_tesla_web.jpeg",
+      process.env.PUBLIC_URL + "images/portfolio_images/jasons_tesla-small.jpg",
     alt: "Tesla",
     title: "Tesla Landing Page",
     description: "A mockup landing page inspired by Tesla.",
@@ -42,7 +42,7 @@ const portfolioItems = [
     id: 5,
     image:
       process.env.PUBLIC_URL +
-      "images/portfolio_images/whisper_secrets_web.jpeg",
+      "images/portfolio_images/whisper_secrets-small.jpg",
     alt: "Secrets App",
     title: "Whisper Secrets",
     description:
@@ -53,7 +53,7 @@ const portfolioItems = [
   {
     id: 6,
     image:
-      process.env.PUBLIC_URL + "images/portfolio_images/fetchbone_web.jpeg",
+      process.env.PUBLIC_URL + "images/portfolio_images/fetchbone-small.jpg",
     alt: "Fetchbone Landing Page",
     title: "Fetchbone",
     description: "A dog dating app landing page inspired by Tinder.",
@@ -63,7 +63,7 @@ const portfolioItems = [
   {
     id: 7,
     image:
-      process.env.PUBLIC_URL + "images/portfolio_images/iss_tracker_web.jpeg",
+      process.env.PUBLIC_URL + "images/portfolio_images/iss_tracker-small.jpg",
     alt: "ISS Tracker App",
     title: "ISS Tracker",
     description:

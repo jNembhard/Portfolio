@@ -14,7 +14,13 @@ import {
 function Card(props) {
   return (
     <MDBCardS style={{ maxWidth: "22rem" }}>
-      <MDBCardImage src={props.image} position="top" alt={props.alt} />
+      <MDBCardImage
+        src={props.image}
+        position="top"
+        alt={props.alt}
+        width="400px"
+        height="220px"
+      />
       <MDBCardBody>
         <MDBCardTitle>{props.title}</MDBCardTitle>
         <MDBCardText>{props.description}</MDBCardText>
@@ -50,8 +56,15 @@ const MDBIconS = styled(MDBIcon)`
 `;
 
 const MDBCardS = styled(MDBCard)`
+  width: 98%;
+  height: 98%;
   margin-bottom: 25px;
   transition: all 0.5s ease-in-out;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 
   &:hover {
     transform: scale(1.08);

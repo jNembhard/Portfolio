@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { init } from "ityped";
 import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
 
 function Info() {
   const textRef = useRef();
@@ -27,24 +28,31 @@ function Info() {
           A <span ref={textRef}></span>
         </h2>
       </div>
-      <Zoom>
-        <picture>
+
+      <picture>
+        <Fade>
           <source
             media="(max-width:400px)"
             srcset={
               process.env.PUBLIC_URL + "images/info_page/sm_computer_1.jpg"
             }
           />
+        </Fade>
+        <Fade>
           <source
             media="(min-width: 410px) and (max-width:576px)"
             srcset={
               process.env.PUBLIC_URL + "images/info_page/sm_computer_2.jpg"
             }
           />
+        </Fade>
+        <Fade>
           <source
             media="(max-width:768px)"
             srcset={process.env.PUBLIC_URL + "images/info_page/md_computer.jpg"}
           />
+        </Fade>
+        <Fade>
           <source
             media="(min-width:600px) and (max-width:740px) and (orientation: landscape)"
             srcset={
@@ -52,6 +60,8 @@ function Info() {
               "images/info_page/md_computer_landscape_small.jpg"
             }
           />
+        </Fade>
+        <Fade>
           <source
             media="(max-width:900px) and (orientation: landscape)"
             srcset={
@@ -59,16 +69,20 @@ function Info() {
               "images/info_page/md_computer_landscape.jpg"
             }
           />
+        </Fade>
+        <Fade>
           <source
             media="(max-width:1440px)"
             srcset={process.env.PUBLIC_URL + "images/info_page/lg_computer.jpg"}
           />
+        </Fade>
+        <Fade>
           <img
             src={process.env.PUBLIC_URL + "images/info_page/lg_computer.jpg"}
             alt="By Fotis Photopoulos on Unsplash"
           />
-        </picture>
-      </Zoom>
+        </Fade>
+      </picture>
     </IntroWrapper>
   );
 }

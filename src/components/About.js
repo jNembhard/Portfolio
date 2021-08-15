@@ -10,7 +10,7 @@ function About() {
         <DescriptionWrap>
           <Fade left>
             <DescriptionContainer>
-              <Fade bottom delay={1100}>
+              <Fade bottom delay={1050}>
                 <AboutTitle id="about">
                   <h2>About Me</h2>
                 </AboutTitle>
@@ -82,10 +82,6 @@ const AboutWrap = styled.div`
 
   @media (max-width: 768px) {
     margin: 20px 0;
-  }
-
-  @media (max-width: 375px) {
-    /* margin: 30px; */
   }
 `;
 
