@@ -4,6 +4,7 @@ import emailjs from "emailjs-com";
 import MuiAlert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
 import { MDBBtn, MDBIcon } from "mdb-react-ui-kit";
+import Fade from "react-reveal/Fade";
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -63,42 +64,54 @@ function Contact(props) {
     <div id="contact">
       <ContactContainer>
         <Left>
-          <ContactHeading>Contact Me</ContactHeading>
+          <Fade left>
+            <ContactHeading>Contact Me</ContactHeading>
+          </Fade>
           <form method="POST" onSubmit={sendEmail}>
-            <input
-              name="from_name"
-              type="text"
-              placeholder="Your Name *"
-              required
-            />
-            <input
-              name="from_email"
-              type="email"
-              placeholder="Your Email *"
-              required
-            />
-            <input
-              name="subject"
-              type="text"
-              placeholder="Subject *"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Write a message..."
-              required
-            />
+            <Fade right delay={1100}>
+              <input
+                name="from_name"
+                type="text"
+                placeholder="Your Name *"
+                required
+              />
+            </Fade>
+            <Fade left delay={1150}>
+              <input
+                name="from_email"
+                type="email"
+                placeholder="Your Email *"
+                required
+              />
+            </Fade>
+            <Fade right delay={1200}>
+              <input
+                name="subject"
+                type="text"
+                placeholder="Subject *"
+                required
+              />
+            </Fade>
+            <Fade left delay={1250}>
+              <textarea
+                name="message"
+                placeholder="Write a message..."
+                required
+              />
+            </Fade>
             <div>
-              <MDBBtn
-                onClick={handleClick({
-                  vertical: "bottom",
-                  horizontal: "right",
-                })}
-                type="submit"
-              >
-                <MDBIconS far icon="envelope" />
-                Send Message
-              </MDBBtn>
+              <Fade bottom>
+                <MDBBtn
+                  onClick={handleClick({
+                    vertical: "bottom",
+                    horizontal: "right",
+                  })}
+                  type="submit"
+                >
+                  <MDBIconS far icon="envelope" />
+                  Send Message
+                </MDBBtn>
+              </Fade>
               <Snackbar
                 open={message}
                 autoHideDuration={null}
@@ -112,14 +125,18 @@ function Contact(props) {
           </form>
         </Left>
         <Right>
-          <ContactInfo>
-            <h2>Phone Number:</h2>
-            +1 (703) 297-0357
-          </ContactInfo>
-          <ContactInfo>
-            <h2>E-mail Address:</h2>
-            nembhardjl@outlook.com
-          </ContactInfo>
+          <Fade bottom delay={1300}>
+            <ContactInfo>
+              <h2>Phone Number:</h2>
+              +1 (703) 297-0357
+            </ContactInfo>
+          </Fade>
+          <Fade bottom delay={1350}>
+            <ContactInfo>
+              <h2>E-mail Address:</h2>
+              nembhardjl@outlook.com
+            </ContactInfo>
+          </Fade>
         </Right>
       </ContactContainer>
     </div>
@@ -130,12 +147,11 @@ export default Contact;
 
 const ContactContainer = styled.div`
   display: flex;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+  margin-top: 130px;
 
-  @media only screen and (max-width: 896px) and (orientation: landscape) {
-    width: 1000px;
+  @media (max-width: 768px) {
+    margin-top: 80px;
+    flex-direction: column;
   }
 `;
 

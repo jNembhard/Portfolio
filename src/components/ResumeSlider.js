@@ -1,11 +1,14 @@
 import React from "react";
 import Carousel, { CarouselItem } from "./props/Carousel";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 function ResumeSlider() {
   return (
     <div>
-      <ResumeHeading id="experience">Experience</ResumeHeading>
+      <Fade>
+        <ResumeHeading id="experience">Resume</ResumeHeading>
+      </Fade>
       <Carousel>
         <Items>
           <Display>
@@ -223,6 +226,38 @@ const Display = styled.div`
       }
     }
   }
+
+  @media (max-width: 414px) {
+    .title__wrap--mod-2 {
+      > h3 {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .title__wrap--mod-1 {
+      > h2 {
+        margin-top: 20px;
+      }
+    }
+
+    .title__wrap--mod-2 {
+      > h2 {
+        margin-top: 20px;
+      }
+
+      > h3 {
+        margin-top: 5px;
+      }
+    }
+
+    .title__wrap--mod-3 {
+      > h2 {
+        margin-top: 20px;
+      }
+    }
+  }
 `;
 
 const Info = styled.div`
@@ -241,7 +276,7 @@ const Info = styled.div`
 
   @media (max-width: 768px) {
     width: 450px;
-    height: 500px;
+    height: 530px;
 
     > ul {
       margin-top: 20px;
@@ -249,13 +284,16 @@ const Info = styled.div`
   }
 
   @media (max-width: 567px) {
-    margin-top: 55px;
-    margin-right: 20px;
-    margin-left: 20px;
-    height: 600px;
+    margin: 55px 20px 0;
+    height: 620px;
     > li {
       margin: 10px 0;
     }
+  }
+
+  @media (max-width: 400px) {
+    height: 690px;
+    margin: 55px 8px 0;
   }
 `;
 

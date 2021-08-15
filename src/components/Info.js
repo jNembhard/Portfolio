@@ -18,7 +18,7 @@ function Info() {
   return (
     <IntroWrapper>
       <div class="content">
-        <Zoom cascade delay={1500}>
+        <Zoom cascade delay={1400}>
           <h3>Hello I'm </h3>
           <h1>Jason Nembhard</h1>
         </Zoom>
@@ -27,10 +27,16 @@ function Info() {
           A <span ref={textRef}></span>
         </h2>
       </div>
-      <Zoom delay={500}>
+      <Zoom>
         <picture>
           <source
-            media="(max-width:576px)"
+            media="(max-width:400px)"
+            srcset={
+              process.env.PUBLIC_URL + "images/info_page/sm_computer_1.jpg"
+            }
+          />
+          <source
+            media="(min-width: 410px) and (max-width:576px)"
             srcset={
               process.env.PUBLIC_URL + "images/info_page/sm_computer_2.jpg"
             }
@@ -38,6 +44,20 @@ function Info() {
           <source
             media="(max-width:768px)"
             srcset={process.env.PUBLIC_URL + "images/info_page/md_computer.jpg"}
+          />
+          <source
+            media="(min-width:600px) and (max-width:740px) and (orientation: landscape)"
+            srcset={
+              process.env.PUBLIC_URL +
+              "images/info_page/md_computer_landscape_small.jpg"
+            }
+          />
+          <source
+            media="(max-width:900px) and (orientation: landscape)"
+            srcset={
+              process.env.PUBLIC_URL +
+              "images/info_page/md_computer_landscape.jpg"
+            }
           />
           <source
             media="(max-width:1440px)"
@@ -84,13 +104,34 @@ const IntroWrapper = styled.div`
       object-fit: contain;
     }
 
+    @media (min-width: 568px) and (max-width: 1370px) and (orientation: landscape) {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 0;
+      object-fit: cover;
+
+      > picture {
+        > source {
+          width: auto;
+          height: auto;
+          object-fit: contain;
+        }
+        > img {
+          width: auto;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+
     @media (max-width: 768px) {
       position: relative;
       overflow-x: hidden;
+      margin-bottom: 0;
     }
 
     @media (max-width: 576px) {
-      overflow: auto;
+      overflow: hidden;
       margin-bottom: 220px;
       > picture {
         > source {
@@ -134,7 +175,19 @@ const IntroWrapper = styled.div`
       -webkit-text-stroke: 2px #ffffff;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 740px) and (max-width: 2000px) and (orientation: landscape) {
+      margin-top: 20%;
+    }
+
+    @media (min-width: 400px) and (max-width: 740px) and (orientation: landscape) {
+      top: 25%;
+      > h1 {
+        font-size: 60px;
+      }
+    }
+
+    @media (max-width: 768px) and (orientation: portrait) {
+      margin-top: inherit;
       text-align: left;
 
       > h1 {
@@ -146,9 +199,9 @@ const IntroWrapper = styled.div`
       }
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 376px) {
       > h1 {
-        font-size: 48px;
+        font-size: 47px;
       }
       > h2 {
         font-size: 43px;

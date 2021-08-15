@@ -39,9 +39,7 @@ function About() {
           </Fade>
           <Fade right>
             <MainSKillsWrap>
-              <Fade bottom delay={1100}>
-                <MainSkills />
-              </Fade>
+              <MainSkills />
             </MainSKillsWrap>
           </Fade>
         </DescriptionWrap>
@@ -60,6 +58,20 @@ const AboutWrap = styled.div`
     padding-top: 300px;
   }
 
+  @media (min-width: 800px) and (max-width: 900px) and (orientation: landscape) {
+    padding-top: 100px;
+    margin-top: -300px;
+  }
+
+  @media (min-width: 901px) and (max-width: 1024px) and (orientation: landscape) {
+    padding-top: 100px;
+    margin-top: 0;
+  }
+
+  @media (min-width: 600px) and (max-width: 750px) and (orientation: landscape) {
+    padding-top: 400px;
+  }
+
   @media (max-width: 1143px) {
     display: flex;
     flex-direction: column;
@@ -70,6 +82,10 @@ const AboutWrap = styled.div`
 
   @media (max-width: 768px) {
     margin: 20px 0;
+  }
+
+  @media (max-width: 375px) {
+    /* margin: 30px; */
   }
 `;
 
@@ -100,7 +116,12 @@ const MainSKillsWrap = styled.div`
   background-color: #f59b42;
   flex: 8;
 
+  @media (max-width: 1300px) {
+    margin-right: 188px;
+  }
+
   @media (max-width: 1143px) {
+    margin-right: 0;
     border-radius: 20px;
   }
 
@@ -116,7 +137,7 @@ const MainSKillsWrap = styled.div`
     width: 400px;
     margin-bottom: 120px;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 376px) {
     width: 360px;
     margin-bottom: 200px;
   }
@@ -128,9 +149,19 @@ const DescriptionWrap = styled.div`
   justify-content: center;
   height: 500px;
 
+  @media (max-width: 1300px) {
+    margin-left: 200px;
+  }
+
   @media (max-width: 1143px) {
     height: 700px;
     flex-direction: column;
+    margin-top: 150px;
+    margin-left: inherit;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: inherit;
   }
 `;
 
@@ -138,9 +169,9 @@ const PContainer = styled.div`
   margin-left: 20px;
   margin-right: 20px;
   color: #111;
-  /* color: #fff; */
+
   > p {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   @media (max-width: 414px) {
@@ -172,7 +203,7 @@ const DescriptionContainer = styled.div`
     width: 400px;
     height: 600px;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 376px) {
     width: 360px;
     height: 700px;
   }
