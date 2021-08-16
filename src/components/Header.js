@@ -19,8 +19,8 @@ function Header(props) {
 
   const sides = [
     { id: 1, option: "About", section: "#about" },
-    { id: 2, option: "Experience", section: "#experience" },
-    { id: 3, option: "Portfolio", section: "#portfolio" },
+    { id: 2, option: "Portfolio", section: "#portfolio" },
+    { id: 3, option: "Experience", section: "#experience" },
     { id: 4, option: "Contact ", section: "#contact" },
   ];
 
@@ -35,7 +35,7 @@ function Header(props) {
     <div ref={wrapperRef}>
       <Container>
         <HeaderBtnWrap>
-          <Fade bottom delay={1050}>
+          <Fade bottom delay={800}>
             <MDBBtnLeft outline color="primary" onClick={saveFile}>
               Resume
               <MDBIconLeft fas icon="download" />
@@ -48,7 +48,7 @@ function Header(props) {
             {sides.map((side) => (
               <HeaderOption key={side.id}>
                 <AnchorLine href={side.section}>
-                  <Flip left cascade delay={1100}>
+                  <Flip left cascade delay={800}>
                     {side.option}
                   </Flip>
                 </AnchorLine>
@@ -56,7 +56,7 @@ function Header(props) {
             ))}
 
             <HeaderBtnWrap>
-              <Fade bottom delay={1050}>
+              <Fade bottom delay={800}>
                 <MDBBtns outline color="primary" onClick={saveFile}>
                   Resume
                   <MDBIconS fas icon="download" />
@@ -66,7 +66,7 @@ function Header(props) {
           </HeaderNav>
 
           <RightMenu>
-            <Fade bottom delay={1050}>
+            <Fade bottom delay={800}>
               <CustomBurger
                 hideOutline={true}
                 toggled={modalOpen}

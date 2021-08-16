@@ -34,7 +34,7 @@ function Portfolio() {
         <MDBCollapse show={showContent}>
           <Row2>
             {portfolioItems.slice(3, 7).map((portfolioItem) => (
-              <Fade bottom>
+              <Fade bottom when={showContent}>
                 <Card
                   key={portfolioItem.id}
                   image={portfolioItem.image}
@@ -48,11 +48,14 @@ function Portfolio() {
             ))}
           </Row2>
         </MDBCollapse>
-        <CollapseContainer>
-          <MDBBtns outline color="dark" onClick={toggleShow}>
-            Show {showContent ? "Less" : "More"}
-          </MDBBtns>
-        </CollapseContainer>
+
+        <Fade>
+          <CollapseContainer>
+            <MDBBtns outline color="dark" onClick={toggleShow}>
+              Show {showContent ? "Less" : "More"}
+            </MDBBtns>
+          </CollapseContainer>
+        </Fade>
       </RowWrap>
     </PortfolioWrapper>
   );

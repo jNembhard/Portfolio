@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { init } from "ityped";
 import Zoom from "react-reveal/Zoom";
-import Fade from "react-reveal/Fade";
+// import Fade from "react-reveal/Fade";
 
 function Info() {
   const textRef = useRef();
@@ -19,69 +19,53 @@ function Info() {
   return (
     <IntroWrapper>
       <div class="content">
-        <Zoom cascade delay={1400}>
+        <Zoom cascade delay={1300}>
           <h3>Hello I'm </h3>
           <h1>Jason Nembhard</h1>
         </Zoom>
-
-        <h2>
-          A <span ref={textRef}></span>
-        </h2>
+        <Zoom casade delay={1400}>
+          <h2>
+            A <span ref={textRef}></span>
+          </h2>
+        </Zoom>
       </div>
 
       <picture>
-        <Fade>
-          <source
-            media="(max-width:400px)"
-            srcset={
-              process.env.PUBLIC_URL + "images/info_page/sm_computer_1.jpg"
-            }
-          />
-        </Fade>
-        <Fade>
-          <source
-            media="(min-width: 410px) and (max-width:576px)"
-            srcset={
-              process.env.PUBLIC_URL + "images/info_page/sm_computer_2.jpg"
-            }
-          />
-        </Fade>
-        <Fade>
-          <source
-            media="(max-width:768px)"
-            srcset={process.env.PUBLIC_URL + "images/info_page/md_computer.jpg"}
-          />
-        </Fade>
-        <Fade>
-          <source
-            media="(min-width:600px) and (max-width:740px) and (orientation: landscape)"
-            srcset={
-              process.env.PUBLIC_URL +
-              "images/info_page/md_computer_landscape_small.jpg"
-            }
-          />
-        </Fade>
-        <Fade>
-          <source
-            media="(max-width:900px) and (orientation: landscape)"
-            srcset={
-              process.env.PUBLIC_URL +
-              "images/info_page/md_computer_landscape.jpg"
-            }
-          />
-        </Fade>
-        <Fade>
-          <source
-            media="(max-width:1440px)"
-            srcset={process.env.PUBLIC_URL + "images/info_page/lg_computer.jpg"}
-          />
-        </Fade>
-        <Fade>
-          <img
-            src={process.env.PUBLIC_URL + "images/info_page/lg_computer.jpg"}
-            alt="By Fotis Photopoulos on Unsplash"
-          />
-        </Fade>
+        <source
+          media="(max-width:576px)"
+          srcset={
+            process.env.PUBLIC_URL + "images/info_page/sm_computer-portrait.jpg"
+          }
+        />
+        <source
+          media="(max-width:768px)"
+          srcset={process.env.PUBLIC_URL + "images/info_page/md_computer.jpg"}
+        />
+        <source
+          media="(min-width:600px) and (max-width:740px) and (orientation: landscape)"
+          srcset={
+            process.env.PUBLIC_URL +
+            "images/info_page/sm_computer-800_landscape.jpg"
+          }
+        />
+        <source
+          media="(max-width:900px) and (orientation: landscape)"
+          srcset={process.env.PUBLIC_URL + "images/info_page/md_computer.jpg"}
+        />
+        <source
+          media="(min-width:1023px) and (max-width:1025px) and (orientation: portrait)"
+          srcset={process.env.PUBLIC_URL + "images/info_page/lg_computer.jpg"}
+        />
+        <source
+          media="(min-width:1025px) and (max-width:1440px)"
+          srcset={
+            process.env.PUBLIC_URL + "images/info_page/lg_computer-1440.jpg"
+          }
+        />
+        <img
+          src={process.env.PUBLIC_URL + "images/info_page/lg_computer.jpg"}
+          alt="By Fotis Photopoulos on Unsplash"
+        />
       </picture>
     </IntroWrapper>
   );
@@ -96,11 +80,23 @@ const IntroWrapper = styled.div`
   height: 100vh;
   align-items: center;
   justify-content: center;
-  margin-bottom: 200px;
 
   > picture {
     position: absolute;
     filter: brightness(30%);
+
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
     > source {
       z-index: -2;
@@ -190,7 +186,7 @@ const IntroWrapper = styled.div`
     }
 
     @media (min-width: 740px) and (max-width: 2000px) and (orientation: landscape) {
-      margin-top: 20%;
+      margin-top: 10%;
     }
 
     @media (min-width: 400px) and (max-width: 740px) and (orientation: landscape) {

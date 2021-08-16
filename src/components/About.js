@@ -51,37 +51,24 @@ function About() {
 export default About;
 
 const AboutWrap = styled.div`
-  padding-top: 120px;
+  padding-top: 250px;
   padding-bottom: 120px;
 
-  @media (max-width: 1440px) {
-    padding-top: 300px;
-  }
-
   @media (min-width: 800px) and (max-width: 900px) and (orientation: landscape) {
-    padding-top: 100px;
-    margin-top: -300px;
-  }
-
-  @media (min-width: 901px) and (max-width: 1024px) and (orientation: landscape) {
-    padding-top: 100px;
+    padding-top: 300px;
     margin-top: 0;
   }
 
   @media (min-width: 600px) and (max-width: 750px) and (orientation: landscape) {
-    padding-top: 400px;
+    padding-top: 600px;
   }
 
   @media (max-width: 1143px) {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 200px;
-    align-items: center;
-    justify-content: center;
+    padding-bottom: 240px;
   }
 
-  @media (max-width: 768px) {
-    margin: 20px 0;
+  @media (max-width: 414px) {
+    padding-top: 500px;
   }
 `;
 
@@ -111,6 +98,8 @@ const MainSKillsWrap = styled.div`
   padding-top: 30px;
   background-color: #f59b42;
   flex: 8;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 
   @media (max-width: 1300px) {
     margin-right: 188px;
@@ -122,19 +111,15 @@ const MainSKillsWrap = styled.div`
   }
 
   @media (max-width: 768px) {
-    border-top-left-radius: 0px 0px;
-    border-top-right-radius: 0px 0px;
-    border-bottom-left-radius: 20px 20px;
-    border-bottom-right-radius: 20px 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     width: 450px;
   }
 
   @media (max-width: 414px) {
-    width: 400px;
-    margin-bottom: 120px;
-  }
-  @media (max-width: 376px) {
-    width: 360px;
+    width: 370px;
     margin-bottom: 200px;
   }
 `;
@@ -196,11 +181,7 @@ const DescriptionContainer = styled.div`
   }
 
   @media (max-width: 414px) {
-    width: 400px;
+    width: 370px;
     height: 600px;
-  }
-  @media (max-width: 376px) {
-    width: 360px;
-    height: 700px;
   }
 `;

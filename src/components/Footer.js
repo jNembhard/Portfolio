@@ -80,4 +80,5 @@ const MDBBtnTwo = styled(MDBBtn)`
 const End = styled.div`
   display: flex;
   padding-top: 80px;
+  color: #ffffff;
 `;

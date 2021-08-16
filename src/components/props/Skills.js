@@ -44,7 +44,7 @@ const MDBCardBodyS = styled(MDBCardBody)`
   }
 
   @media (max-width: 414px) {
-    width: 175px;
+    width: 163px;
     height: 100px;
   }
 `;
@@ -56,15 +56,9 @@ const TitleWrap = styled.div`
   font-weight: 200;
 
   @media (max-width: 414px) {
-    margin-left: 9px;
+    margin-left: 8px;
     & .font-size {
-      font-size: 18px;
-    }
-  }
-
-  @media (max-width: 376px) {
-    & .font-size {
-      font-size: 14px;
+      font-size: 15px;
     }
   }
 `;
@@ -97,10 +91,6 @@ const MDBCardS = styled(MDBCard)`
 
   @media (max-width: 414px) {
     margin-right: 1px;
-    left: -3.5px;
-  }
-
-  @media (max-width: 376px) {
-    width: 150px;
+    left: -6px;
   }
 `;

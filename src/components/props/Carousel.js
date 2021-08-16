@@ -78,6 +78,7 @@ const CarouselWrap = styled.div`
   overflow: hidden;
   align-items: center;
   background-color: crimson;
+  /* height: 900px; */
 
   .inner {
     white-space: nowrap;
@@ -90,7 +91,7 @@ const CarouselItemWrap = styled.div`
   align-items: center;
   justify-content: center;
   height: 500px;
-  background-color: crimson;
+  /* background-color: crimson; */
   color: #ffffff;
 
   @media (max-width: 768px) {
@@ -149,9 +150,12 @@ const Indicators = styled.div`
     height: 20px;
     border-radius: 100%;
     margin-right: 30px;
+
     cursor: pointer;
     @media (max-width: 567px) {
       margin-bottom: 50px;
+      margin-right: 15px;
+      margin-left: 15px;
     }
   }
 
