@@ -3,10 +3,11 @@ const portfolioItems = [
     id: 1,
     image:
       process.env.PUBLIC_URL + "images/portfolio_images/pod_access-small.jpg",
-    alt: "Pod Access",
-    title: "Pod Access Request",
-    description: "Landing page built with BEM, HTML5, and Sass",
-    website: "https://podaccess-jason.netlify.app/",
+    alt: "Podcast Access Request",
+    title: "Podcast Access Request",
+    description:
+      "Podcast Request page built with BEM, HTML5, SCSS, and JavaScript.",
+    website: "https://podaccess-jason.netlify.app",
     source: "https://github.com/jNembhard/pod-request-access",
   },
   {
@@ -15,7 +16,8 @@ const portfolioItems = [
       process.env.PUBLIC_URL + "images/portfolio_images/jasonflix-small.jpg",
     alt: "Netflix",
     title: "Netflix Clone",
-    description: "Scroll through movies and watch available trailers.",
+    description:
+      "Uses React and the TMDB API to view movies and watch trailers.",
     website: "https://jason-flix.web.app/",
     source: "https://github.com/jNembhard/jflix",
   },
@@ -24,19 +26,19 @@ const portfolioItems = [
     image: process.env.PUBLIC_URL + "images/portfolio_images/amazon-small.jpg",
     alt: "Amazon",
     title: "Amazon e-Commerce Clone",
-    description: "An ecommerce app",
+    description: "Built with React Redux and Stripe's API.",
     website: "https://amznjason.web.app/",
     source: "https://github.com/jNembhard/amzn-ecommerce",
   },
   {
     id: 4,
     image:
-      process.env.PUBLIC_URL + "images/portfolio_images/jasons_tesla-small.jpg",
-    alt: "Tesla",
-    title: "Tesla Landing Page",
-    description: "A mockup landing page inspired by Tesla.",
-    website: "https://jasons-tesla.web.app/",
-    source: "https://github.com/jNembhard/tesla-design",
+      process.env.PUBLIC_URL + "images/portfolio_images/maker_pre-launch.jpeg",
+    alt: "Maker Pre-Launch",
+    title: "Maker Pre-Launch",
+    description: "Landing page built with BEM, HTML5, Sass, and JavaScript.",
+    website: "https://maker-prelaunch.netlify.app/",
+    source: "https://github.com/jNembhard/makerpage",
   },
   {
     id: 5,
@@ -52,13 +54,12 @@ const portfolioItems = [
   },
   {
     id: 6,
-    image:
-      process.env.PUBLIC_URL + "images/portfolio_images/fetchbone-small.jpg",
-    alt: "Fetchbone Landing Page",
-    title: "Fetchbone",
-    description: "A dog dating app landing page inspired by Tinder.",
-    website: "https://jnembhard.github.io/fetchbone/",
-    source: "https://github.com/jNembhard/fetchbone",
+    image: process.env.PUBLIC_URL + "images/portfolio_images/typemaster.jpeg",
+    alt: "Typemaster",
+    title: "Typemaster",
+    description: "Typemaster Pre-launch page.",
+    website: "https://type-masters.netlify.app/",
+    source: "https://github.com/jNembhard/typemaster",
   },
   {
     id: 7,
@@ -67,7 +68,7 @@ const portfolioItems = [
     alt: "ISS Tracker App",
     title: "ISS Tracker",
     description:
-      "Built in Python. Tracks the International Space Station's position.",
+      "Built with Python. Tracks the International Space Station's position.",
     website: "",
     source: "https://github.com/jNembhard/iss_tracker",
   },

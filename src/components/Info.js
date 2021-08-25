@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { init } from "ityped";
 import Zoom from "react-reveal/Zoom";
-// import Fade from "react-reveal/Fade";
 
 function Info() {
   const textRef = useRef();
@@ -85,7 +84,7 @@ const IntroWrapper = styled.div`
     position: absolute;
     filter: brightness(30%);
 
-    animation: fadeInAnimation ease 2s;
+    animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 
@@ -144,6 +143,7 @@ const IntroWrapper = styled.div`
       overflow: hidden;
       margin-bottom: 220px;
       > picture {
+        animation: fadeInAnimation ease 2s;
         > source {
           overflow-x: hidden;
           object-fit: contain;
