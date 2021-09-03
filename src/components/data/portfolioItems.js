@@ -2,18 +2,19 @@ const portfolioItems = [
   {
     id: 1,
     image:
-      process.env.PUBLIC_URL + "images/portfolio_images/pod_access-small.jpg",
-    alt: "Podcast Access Request",
-    title: "Podcast Access Request",
+      process.env.PUBLIC_URL +
+      "images/portfolio_images/Officelite-Coming-Soon.webp",
+    alt: "Officelite",
+    title: "Officelite",
     description:
-      "Podcast Request page built with BEM, HTML5, SCSS, and JavaScript.",
-    website: "https://podaccess-jason.netlify.app",
-    source: "https://github.com/jNembhard/pod-request-access",
+      "Website built with NextJS, Styled-JSX Sass, and a mobile-first workflow",
+    website: "https://officelite-jnembhard.vercel.app/",
+    source: "https://github.com/jNembhard/officelite",
   },
   {
     id: 2,
     image:
-      process.env.PUBLIC_URL + "images/portfolio_images/jasonflix-small.jpg",
+      process.env.PUBLIC_URL + "images/portfolio_images/jasonflix-small.webp",
     alt: "Netflix",
     title: "Netflix Clone",
     description:
@@ -23,7 +24,18 @@ const portfolioItems = [
   },
   {
     id: 3,
-    image: process.env.PUBLIC_URL + "images/portfolio_images/amazon-small.jpg",
+    image:
+      process.env.PUBLIC_URL + "images/portfolio_images/Pod-access-page.webp",
+    alt: "Podcast Access Request",
+    title: "Podcast Access Request",
+    description:
+      "Podcast Request page built with BEM, HTML5, SCSS, and JavaScript.",
+    website: "https://podaccess-jason.netlify.app",
+    source: "https://github.com/jNembhard/pod-request-access",
+  },
+  {
+    id: 4,
+    image: process.env.PUBLIC_URL + "images/portfolio_images/amazon-small.webp",
     alt: "Amazon",
     title: "Amazon e-Commerce Clone",
     description: "Built with React Redux and Stripe's API.",
@@ -31,20 +43,10 @@ const portfolioItems = [
     source: "https://github.com/jNembhard/amzn-ecommerce",
   },
   {
-    id: 4,
-    image:
-      process.env.PUBLIC_URL + "images/portfolio_images/maker_pre-launch.jpeg",
-    alt: "Maker Pre-Launch",
-    title: "Maker Pre-Launch",
-    description: "Landing page built with BEM, HTML5, Sass, and JavaScript.",
-    website: "https://maker-prelaunch.netlify.app/",
-    source: "https://github.com/jNembhard/makerpage",
-  },
-  {
     id: 5,
     image:
       process.env.PUBLIC_URL +
-      "images/portfolio_images/whisper_secrets-small.jpg",
+      "images/portfolio_images/whisper_secrets-small.webp",
     alt: "Secrets App",
     title: "Whisper Secrets",
     description:
@@ -54,17 +56,18 @@ const portfolioItems = [
   },
   {
     id: 6,
-    image: process.env.PUBLIC_URL + "images/portfolio_images/typemaster.jpeg",
-    alt: "Typemaster",
-    title: "Typemaster",
-    description: "Typemaster Pre-launch page.",
-    website: "https://type-masters.netlify.app/",
-    source: "https://github.com/jNembhard/typemaster",
+    image:
+      process.env.PUBLIC_URL + "images/portfolio_images/maker-pre-launch.webp",
+    alt: "Maker Pre-Launch",
+    title: "Maker Pre-Launch",
+    description: "Landing page built with BEM, HTML5, Sass, and JavaScript.",
+    website: "https://maker-prelaunch.netlify.app/",
+    source: "https://github.com/jNembhard/makerpage",
   },
   {
     id: 7,
     image:
-      process.env.PUBLIC_URL + "images/portfolio_images/iss_tracker-small.jpg",
+      process.env.PUBLIC_URL + "images/portfolio_images/iss_tracker-small.webp",
     alt: "ISS Tracker App",
     title: "ISS Tracker",
     description:

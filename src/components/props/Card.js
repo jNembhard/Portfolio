@@ -14,7 +14,7 @@ import {
 function Card(props) {
   return (
     <MDBCardS style={{ maxWidth: "22rem" }}>
-      <MDBCardImage
+      <MDBCardImageGrow
         src={props.image}
         position="top"
         alt={props.alt}
@@ -55,18 +55,24 @@ const MDBIconS = styled(MDBIcon)`
   padding-right: 5px;
 `;
 
+const MDBCardImageGrow = styled(MDBCardImage)`
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.08);
+  }
+`;
+
 const MDBCardS = styled(MDBCard)`
   width: 98%;
   height: 98%;
   margin-bottom: 25px;
-  transition: all 0.5s ease-in-out;
-
+  position: relative;
+  overflow: hidden;
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
-  }
-
-  &:hover {
-    transform: scale(1.08);
   }
 `;
