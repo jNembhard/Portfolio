@@ -147,10 +147,8 @@ export default Contact;
 
 const ContactContainer = styled.div`
   display: flex;
-  margin-top: 130px;
 
   @media (max-width: 768px) {
-    margin-top: 80px;
     flex-direction: column;
   }
 `;
@@ -228,6 +226,10 @@ const Right = styled.div`
 
   @media (max-width: 768px) {
     padding: 32px 45px;
+  }
+
+  @media (max-width: 898px) and (orientation: landscape) {
+    padding: 120px 45px;
   }
 `;
 

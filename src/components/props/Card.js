@@ -25,8 +25,21 @@ function Card(props) {
         <MDBCardTitle>{props.title}</MDBCardTitle>
         <MDBCardText>{props.description}</MDBCardText>
         <ButtonWrap>
-          {props.website && <MDBBtnOne href={props.website}>Website</MDBBtnOne>}
-          <MDBBtnTwo style={{ backgroundColor: "#333333" }} href={props.source}>
+          {props.website && (
+            <MDBBtnOne
+              target="_blank"
+              href={props.website}
+              rel="noopener noreferrer"
+            >
+              Website
+            </MDBBtnOne>
+          )}
+          <MDBBtnTwo
+            style={{ backgroundColor: "#333333" }}
+            target="_blank"
+            href={props.source}
+            rel="noopener noreferrer"
+          >
             <MDBIconS fab icon="github" />
             Github
           </MDBBtnTwo>

@@ -20,8 +20,7 @@ function Header(props) {
   const sides = [
     { id: 1, option: "About", section: "#about" },
     { id: 2, option: "Portfolio", section: "#portfolio" },
-    { id: 3, option: "Experience", section: "#experience" },
-    { id: 4, option: "Contact ", section: "#contact" },
+    { id: 3, option: "Contact ", section: "#contact" },
   ];
 
   const saveFile = () => {
