@@ -1,5 +1,15 @@
 const portfolioItems = [
   {
+    id: 0,
+    image:
+      process.env.PUBLIC_URL + "images/portfolio_images/Galleria-Snapshot.webp",
+    alt: "Galleria",
+    title: "Galleria",
+    description: "An online art gallery built with Next JS and React Redux.",
+    website: "https://galleria-art.vercel.app/",
+    source: "https://github.com/jNembhard/galleria",
+  },
+  {
     id: 1,
     image:
       process.env.PUBLIC_URL +
@@ -7,7 +17,7 @@ const portfolioItems = [
     alt: "Officelite",
     title: "Officelite",
     description:
-      "Website built with NextJS, Styled-JSX Sass, and a mobile-first workflow",
+      "Website built with NextJS, Styled-JSX Sass, and a mobile-first workflow.",
     website: "https://officelite-jnembhard.vercel.app/",
     source: "https://github.com/jNembhard/officelite",
   },
@@ -63,17 +73,6 @@ const portfolioItems = [
     description: "Landing page built with BEM, HTML5, Sass, and JavaScript.",
     website: "https://maker-prelaunch.netlify.app/",
     source: "https://github.com/jNembhard/makerpage",
-  },
-  {
-    id: 7,
-    image:
-      process.env.PUBLIC_URL + "images/portfolio_images/iss_tracker-small.webp",
-    alt: "ISS Tracker App",
-    title: "ISS Tracker",
-    description:
-      "Built with Python. Tracks the International Space Station's position.",
-    website: "",
-    source: "https://github.com/jNembhard/iss_tracker",
   },
 ];
 

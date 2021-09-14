@@ -220,16 +220,14 @@ const Right = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 100px;
-  padding-left: 0;
-  padding-top: 90px;
+  padding: 90px 100px 0 0;
 
   @media (max-width: 768px) {
     padding: 32px 45px;
   }
 
-  @media (max-width: 898px) and (orientation: landscape) {
-    padding: 120px 45px;
+  @media (min-width: 768px) and (orientation: landscape) {
+    padding: 90px 0;
   }
 `;
 
