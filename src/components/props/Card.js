@@ -14,13 +14,15 @@ import {
 function Card(props) {
   return (
     <MDBCardS style={{ maxWidth: "22rem" }}>
-      <MDBCardImageGrow
-        src={props.image}
-        position="top"
-        alt={props.alt}
-        width="400px"
-        height="220px"
-      />
+      <a target="_blank" href={props.website} rel="noopener noreferrer">
+        <MDBCardImageGrow
+          src={props.image}
+          position="top"
+          alt={props.alt}
+          width="400px"
+          height="220px"
+        />
+      </a>
       <MDBCardBody>
         <MDBCardTitle>{props.title}</MDBCardTitle>
         <MDBCardText>{props.description}</MDBCardText>
