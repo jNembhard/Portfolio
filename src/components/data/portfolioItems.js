@@ -5,7 +5,8 @@ const portfolioItems = [
       process.env.PUBLIC_URL + "images/portfolio_images/Galleria-Snapshot.webp",
     alt: "Galleria",
     title: "Galleria",
-    description: "An online art gallery built with Next JS and React Redux.",
+    description:
+      "An online art gallery built with Framer-Motion, Next JS, and React Redux.",
     website: "https://galleria-art.vercel.app/",
     source: "https://github.com/jNembhard/galleria",
   },
@@ -15,20 +16,18 @@ const portfolioItems = [
     alt: "Planet Facts Site",
     title: "Planet Facts Site",
     description:
-      "Website built with Atomic Design Pattern, Mobile First Workflow, and React.",
+      "Website built with Atomic Design Pattern, Mobile First Workflow, Framer-Motion, and React.",
     website: "https://planetfacts.vercel.app/",
     source: "https://github.com/jNembhard/solar-system",
   },
   {
     id: 2,
-    image:
-      process.env.PUBLIC_URL + "images/portfolio_images/jasonflix-small.webp",
-    alt: "Netflix",
-    title: "Netflix Clone",
-    description:
-      "Uses React and the TMDB API to view movies and watch trailers.",
-    website: "https://jason-flix.web.app/",
-    source: "https://github.com/jNembhard/jflix",
+    image: process.env.PUBLIC_URL + "images/portfolio_images/amazon-small.webp",
+    alt: "Amazon",
+    title: "Amazon e-Commerce Clone",
+    description: "Built with React Redux and Stripe's API.",
+    website: "https://amznjason.web.app/",
+    source: "https://github.com/jNembhard/amzn-ecommerce",
   },
   {
     id: 3,
@@ -45,21 +44,23 @@ const portfolioItems = [
   {
     id: 4,
     image:
+      process.env.PUBLIC_URL + "images/portfolio_images/jasonflix-small.webp",
+    alt: "Netflix",
+    title: "Netflix Clone",
+    description:
+      "Uses React and the TMDB API to view movies and watch trailers.",
+    website: "https://jason-flix.web.app/",
+    source: "https://github.com/jNembhard/jflix",
+  },
+  {
+    id: 5,
+    image:
       process.env.PUBLIC_URL + "images/portfolio_images/maker-pre-launch.webp",
     alt: "Maker Pre-Launch",
     title: "Maker Pre-Launch",
     description: "Landing page built with BEM, HTML5, Sass, and JavaScript.",
     website: "https://maker-prelaunch.netlify.app/",
     source: "https://github.com/jNembhard/makerpage",
-  },
-  {
-    id: 5,
-    image: process.env.PUBLIC_URL + "images/portfolio_images/amazon-small.webp",
-    alt: "Amazon",
-    title: "Amazon e-Commerce Clone",
-    description: "Built with React Redux and Stripe's API.",
-    website: "https://amznjason.web.app/",
-    source: "https://github.com/jNembhard/amzn-ecommerce",
   },
   {
     id: 6,
@@ -73,17 +74,6 @@ const portfolioItems = [
     website: "https://whisper-secrets.herokuapp.com/",
     source: "https://github.com/jNembhard/whisper_mockup",
   },
-  // {
-  //   id: 7,
-  //   image:
-  //     process.env.PUBLIC_URL + "images/portfolio_images/Pod-access-page.webp",
-  //   alt: "Podcast Access Request",
-  //   title: "Podcast Access Request",
-  //   description:
-  //     "Podcast Request page built with BEM, HTML5, SCSS, and JavaScript.",
-  //   website: "https://podaccess-jason.netlify.app",
-  //   source: "https://github.com/jNembhard/pod-request-access",
-  // },
 ];
 
 export default portfolioItems;
