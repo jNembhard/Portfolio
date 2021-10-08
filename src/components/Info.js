@@ -33,36 +33,37 @@ function Info() {
         <source
           media="(max-width:576px)"
           srcset={
-            process.env.PUBLIC_URL + "images/info_page/sm_computer-portrait.jpg"
+            process.env.PUBLIC_URL +
+            "images/info_page/sm_computer-portrait.webp"
           }
         />
         <source
           media="(max-width:768px)"
-          srcset={process.env.PUBLIC_URL + "images/info_page/md_computer.jpg"}
+          srcset={process.env.PUBLIC_URL + "images/info_page/md_computer.webp"}
         />
         <source
           media="(min-width:600px) and (max-width:740px) and (orientation: landscape)"
           srcset={
             process.env.PUBLIC_URL +
-            "images/info_page/sm_computer-800_landscape.jpg"
+            "images/info_page/sm_computer-800_landscape.webp"
           }
         />
         <source
           media="(max-width:900px) and (orientation: landscape)"
-          srcset={process.env.PUBLIC_URL + "images/info_page/md_computer.jpg"}
+          srcset={process.env.PUBLIC_URL + "images/info_page/md_computer.webp"}
         />
         <source
           media="(min-width:1023px) and (max-width:1025px) and (orientation: portrait)"
-          srcset={process.env.PUBLIC_URL + "images/info_page/lg_computer.jpg"}
+          srcset={process.env.PUBLIC_URL + "images/info_page/lg_computer.webp"}
         />
         <source
           media="(min-width:1025px) and (max-width:1440px)"
           srcset={
-            process.env.PUBLIC_URL + "images/info_page/lg_computer-1440.jpg"
+            process.env.PUBLIC_URL + "images/info_page/lg_computer-1440.webp"
           }
         />
         <img
-          src={process.env.PUBLIC_URL + "images/info_page/lg_computer.jpg"}
+          src={process.env.PUBLIC_URL + "images/info_page/lg_computer.webp"}
           alt="By Fotis Photopoulos on Unsplash"
         />
       </picture>
